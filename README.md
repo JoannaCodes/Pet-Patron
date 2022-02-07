@@ -1,2 +1,2 @@
-# Pet-Patron
-CET5 Web Development Project
+# Web-Development
+WebDev project for CET
