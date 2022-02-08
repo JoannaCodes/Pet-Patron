@@ -59,10 +59,6 @@ body {
     align-items: center;
 }
 
-
-
-
-
 /*--------- Body ---------*/
 .body {
     min-height: 100vh;
@@ -87,14 +83,39 @@ body {
     transition: box-shadow .3s;
 }
 
+.buy-button a{
+	background-color: #FF7F50;
+    color: black;
+    padding: 12px;
+    border-radius: 20px;
+    transition: box-shadow .3s;
+	text-decoration: none;
+}
+
+.buy-button a:hover {
+	background-color: #FF7F50;
+    color: whitesmoke;
+    padding: 12px;
+    border-radius: 20px;
+    transition: box-shadow .3s;
+	text-decoration: none;
+}
+
 .buy {
+	background-color: #FF7F50;
+    color: black;
+    padding: 12px;
+    border-radius: 20px;
+    transition: box-shadow .3s;
+}
+
+.buy a {
 	background-color: #FF7F50;
     color: whitesmoke;
     padding: 12px;
     border-radius: 20px;
     transition: box-shadow .3s;
 }
-
 
 .body a {
 	text-decoration: none;
@@ -104,7 +125,6 @@ body {
 .body a:hover {
 	color: white;
 }
-
 
 /*------ Footer from pet profile ------*/ 
 
