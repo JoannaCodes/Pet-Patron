@@ -23,41 +23,14 @@ h4 {
     font-size: 1.30rem;
 }
 
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 5px 5px;
-    overflow: hidden;
-}
-
-li {
-    display: inline;
-    float: left;
-}
-
-li a {
-    display: block;
-    color: black;
-    padding: 8px;
-    background-color: #c162de;
-    text-align: center;
-    padding: 15px 13px;
-    text-decoration: none;
-}
-
-li a:hover {
-    color: white;
+body {
+    background-color: #FFFFFF;
 }
 
 
-a {
-    color: black;
-    text-decoration: none;
-    display: block;
-}
+/* ID */
 
-/* ------ */
-
+/* CLASS */
 .navbar {
     background-color: #FF7F50;
     border-bottom-left-radius: 50px;
@@ -86,7 +59,54 @@ a {
     align-items: center;
 }
 
-/* ------ */
+
+
+
+
+/*--------- Body ---------*/
+.body {
+    min-height: 100vh;
+    width: 90%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+}
+
+
+.product {
+	border-style: ridge;
+	box-shadow: 5px 5px 10px grey;
+	padding-top: 10px;
+}
+
+.buy-button {
+	background-color: #FF7F50;
+    color: whitesmoke;
+    padding: 12px;
+    border-radius: 20px;
+    transition: box-shadow .3s;
+}
+
+.buy {
+	background-color: #FF7F50;
+    color: whitesmoke;
+    padding: 12px;
+    border-radius: 20px;
+    transition: box-shadow .3s;
+}
+
+
+.body a {
+	text-decoration: none;
+	color: black;
+}
+
+.body a:hover {
+	color: white;
+}
+
+
+/*------ Footer from pet profile ------*/ 
 
 .footer {
     display: flex;
@@ -96,7 +116,6 @@ a {
     border-top-left-radius: 50px;
     border-top-right-radius: 50px;
 }
-
 .footer h4 {
     text-transform: uppercase;
 }
