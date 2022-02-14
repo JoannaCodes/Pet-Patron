@@ -24,7 +24,7 @@
 
         <!-- CSS File -->
         <link rel="stylesheet" href="user-page.css">
-
+		
     </head>
 
     <body>
@@ -88,24 +88,46 @@
             </div>
         </nav>
 
-        <div class="body">
-            <div class="row">
-                <div class="col user-1">
-                    <img src="/assets/images/slides/slide1.png" height="80" width="80">
-                    <p>Purchase</p>
-                    <p>Account</p>
-                    <h4 align="center"><a href="">Profile</a></h4>
-                </div>
-                <div class="col user-2">
-                    <img src="/assets/images/slides/slide1.png" height="80" width="80">
-                    <p>Name of user</p>
-                    <p>User info</p>
-                    <p>User info</p>
-                    <p>User info</p>
-                </div>
-            </div>
-        </div>
+		<!--- Body as Tab --->
+		<div class = "body">
+			<div class="tab">
+				<button class="tablinks" onclick="openTab(event, 'Profile')" id="defaultOpen">Profile</button>
+				<button class="tablinks" onclick="openTab(event, 'Purchase')">Purchase</button>
+				<button class="tablinks" onclick="openTab(event, 'Account')">Account</button>
+			</div>
+			<div id="Profile" class="tabcontent">
+				<h2>Profile</h2>
+				<p>Insert contents here</p>
+			</div>
+			<div id="Purchase" class="tabcontent">
+				<h2>Purchase</h2>
+				<p>Insert contents here</p>
+			</div>
+			<div id="Account" class="tabcontent">
+				<h2>Account</h2>
+				<p>Insert contents here</p>
+			</div>
+			
+			<script>
+				function openTab(evt, tabName) {
+				  var i, tabcontent, tablinks;
+				  tabcontent = document.getElementsByClassName("tabcontent");
+				  for (i = 0; i < tabcontent.length; i++) {
+					tabcontent[i].style.display = "none";
+				  }
+				  tablinks = document.getElementsByClassName("tablinks");
+				  for (i = 0; i < tablinks.length; i++) {
+					tablinks[i].className = tablinks[i].className.replace(" active", "");
+				  }
+				  document.getElementById(tabName).style.display = "block";
+				  evt.currentTarget.className += " active";
+				}
 
+				// Get the element with id="defaultOpen" and click on it
+				document.getElementById("defaultOpen").click();
+			</script>
+		</div>
+		
         <!-- Footer -->
         <div class="container-fluid mt-5">
             <div class="footer row p-5">
