@@ -1,4 +1,5 @@
 * {
+	box-sizing: border-box;
     font-family: 'Rubik', sans-serif;
     font-size: 1rem;
     color: #212529;
@@ -24,261 +25,10 @@ h4 {
 }
 
 body {
-    background-color: #f7839c;
+    background-color: #FFFFFF;
 }
 
-.row {
-    margin-top: 5%;
-    display: flex;
-    justify-content: space-between;
-    margin-right: 5%;
-    margin-left: 5%;
-}
-
-.col {
-    flex-basis: 40%;
-    margin-bottom: 5%;
-    padding: 10px 6px;
-    box-sizing: border-box;
-}
-
-
-/*------ Header ------*/
-.header {
-    background-color: #e4e1eb;
-    border-bottom-left-radius: 60px;
-    border-bottom-right-radius: 60px;
-    color: #000000;
-    min-height: 20vh;
-    width: 100%;
-    position: relative;
-}
-
-nav {
-    display: flex;
-    padding: 2% 6%;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.nav-links {
-    flex: 1;
-    text-align: right;
-}
-
-.nav-links ul li {
-    list-style: none;
-    display: inline-block;
-    padding: 8px 12px;
-    position: relative;
-}
-
-.nav-links ul li a {
-    text-decoration: none;
-    font-size: 18px;
-}
-
-.intro {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-}
-
-.intro h1 {
-    font-size: 60px;
-}
-
-.intro p {
-    margin: 10px 0 40px;
-    font-size: 15px;
-}
-
-.nav-btn {
-    color: #000000;
-}
-
-.nav-btn::after {
-    content: '';
-    width: 0%;
-    height: 2px;
-    background: #02006d;
-    display: block;
-    margin: auto;
-    transition: 0.5s;
-}
-
-.nav-btn:hover::after {
-    width: 100%;
-}
-
-.login-btn {
-    background-color: #02006d;
-    color: whitesmoke;
-    padding: 12px;
-    border-radius: 20px;
-    transition: box-shadow .3s;
-}
-
-.login-btn:hover {
-    box-shadow: 0 3px 10px 5px rgba(33, 33, 33, .2);
-}
-
-.btn {
-    display: block;
-    margin-top: 3%;
-    text-decoration: none;
-    background-color: #02006d;
-    font-size: 15px;
-    color: whitesmoke;
-    padding: 12px 34px;
-    border-radius: 20px;
-    position: relative;
-    cursor: pointer;
-    transition: box-shadow .3s;
-}
-
-.btn:hover {
-    box-shadow: 0 3px 10px 5px rgba(33, 33, 33, .2);
-}
-
-/*------ Body --------*/
-.body {
-    min-height: 100vh;
-    width: 90%;
-    margin: auto;
-    text-align: center;
-    padding-top: 40px;
-}
-
-* {
-    box-sizing: border-box;
-}
-
-.user-1 {
-    flex: 25%;
-    width: 25%;
-    padding: 40px;
-    height: 100vh;
-    background-color: #ebb4ed;
-    font-size: 20px;
-    border-left-style: solid;
-    border-top-style: solid;
-    border-bottom-style: solid;
-
-}
-
-.user-2 {
-    flex: 50%;
-    width: 75%;
-    padding: 40px;
-    height: 100vh;
-    background-color: #ebb4ed;
-    font-size: 20px;
-    border-left-style: dotted;
-    border-right-style: solid;
-    border-top-style: solid;
-    border-bottom-style: solid;
-}
-
-.user-1 p {
-    text-align: left;
-}
-
-.user-1 img {
-    border-radius: 50%;
-}
-
-.user-2 p {
-    text-align: left;
-}
-
-.user-2 img {
-    border-radius: 50%;
-}
-
-.row {
-    display: flex;
-}
-
-.row:after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
-
-/*------ Footer ------*/
-.footer {
-    background-color: #e4e1eb;
-    border-top-left-radius: 60px;
-    border-top-right-radius: 60px;
-    color: #000000;
-    min-height: 100vh;
-    padding-top: 50px;
-    padding-right: 40px;
-    padding-left: 40px;
-    margin-top: 5%;
-}
-
-.text-col h1 {
-    font-size: 60px;
-    margin-bottom: 30px;
-}
-
-.text-col p {
-    margin-top: 0;
-    margin-bottom: 10px;
-}
-
-.form-col {
-    background-color: #02006d;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07),
-        0 2px 4px rgba(0, 0, 0, 0.07),
-        0 4px 8px rgba(0, 0, 0, 0.07),
-        0 8px 16px rgba(0, 0, 0, 0.07),
-        0 16px 32px rgba(0, 0, 0, 0.07),
-        0 32px 64px rgba(0, 0, 0, 0.07);
-    color: whitesmoke;
-    border-radius: 10px;
-    padding: 20px;
-    width: 60%;
-}
-
-input[type=text],
-input[type=email],
-select,
-textarea {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-    margin-top: 6px;
-    margin-bottom: 16px;
-    resize: vertical;
-}
-
-input[type=submit] {
-    background-color: #f7839c;
-    color: white;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-input[type=submit]:hover {
-    background-color: #45a049;
-}
-
-hr {
-    margin-top: 5%;
-    margin-bottom: 5%;
-}
-
-/* ------ */
+/* CLASS */
 .navbar {
     background-color: #FF7F50;
     border-bottom-left-radius: 50px;
@@ -307,7 +57,51 @@ hr {
     align-items: center;
 }
 
-/* ------ */
+
+/*------ Body --------*/
+
+/*---styling the tab---*/
+.body {
+	background-color: #FFFFFF;
+	min-height: 100vh;
+	width: 100%;
+	padding: 25px 15px;
+}
+.tab {
+	float: left;
+	background-color: #FF7F50;
+	width: 20%;
+	height: 100vh;
+}
+/*--buttons tab--*/
+.tab button {
+	display: block;
+	background-color: #FF7F50;
+	color: black;
+	padding: 22px 16px;
+	width: 100%;
+	border: none;
+	outline: none;
+	text-align: left;
+	cursor: pointer;
+	transition: 0.3s;
+	font-size: 17px;
+}
+
+.tab button:hover {
+	background-color: #50D0FF;
+}
+
+.tabcontent {
+	float: left;
+	padding: 5px 12px;
+	border: 3px solid #FF7F50;
+	width: 80%;
+	min-height: 100vh;
+}
+
+
+/*------ Footer from pet profile ------*/ 
 
 .footer {
     display: flex;
@@ -317,7 +111,6 @@ hr {
     border-top-left-radius: 50px;
     border-top-right-radius: 50px;
 }
-
 .footer h4 {
     text-transform: uppercase;
 }
