@@ -8,8 +8,9 @@
             <thead>
                 <tr>
                     <th scope="col">Product Id</th>
-                    <th scope="col">Product Id</th>
+                    <th scope="col">Product Name</th>
                     <th scope="col">Description</th>
+                    <th scope="col">Price</th>
                     <th scope="col">Stocks</th>
                     <th class"border-start" scope="col">Actions</th>
                 </tr>
@@ -17,6 +18,7 @@
             <tbody>
                 <tr>
                     <th>0000</th>
+                    <td>0000</td>
                     <td>0000</td>
                     <td>0000</td>
                     <td>0000</td>
