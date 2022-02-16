@@ -23,6 +23,12 @@ h3 {
 h4 {
     font-size: 1.30rem;
 }
+h6 {
+	font-size: 1.00rem;
+}
+p {
+	font-size: 0.78rem;
+}
 
 body {
     background-color: #FFFFFF;
@@ -69,14 +75,14 @@ body {
 }
 .tab {
 	float: left;
-	background-color: #FF7F50;
+	background-color: #FFFFFF;
 	width: 20%;
 	height: 100vh;
 }
 /*--buttons tab--*/
 .tab button {
 	display: block;
-	background-color: #FF7F50;
+	background-color: #FFFFFF;
 	color: black;
 	padding: 22px 16px;
 	width: 100%;
@@ -88,18 +94,99 @@ body {
 	font-size: 17px;
 }
 
-.tab button:hover {
-	background-color: #50D0FF;
+.tab button:hover{
+	background-color:#F9DCC5;
 }
-
+.tab button.active{
+	background-color:#F9DCC5;
+}
 .tabcontent {
 	float: left;
-	padding: 5px 12px;
-	border: 3px solid #FF7F50;
+	padding: 8px 12px;
+	background-color: #F9DCC5;
+	border-left: none; /**4px solid #FFFFFF;**/
 	width: 80%;
 	min-height: 100vh;
 }
 
+/*profile and account CSS*/
+.user {
+	margin-left: 150px;
+	margin-top: 30px;
+	width: 80%;
+}
+label {
+	width: 180px;
+	padding:10px 15px;
+	font-size: 1.00rem;
+	text-align: right;
+}
+
+input[type=text], select {
+	width:350px;
+	padding:5px 15px;
+	display:inline-block;
+	border:1px solid #ccc;
+	border-radius:4px;
+	box-sizing:border-box;
+}
+
+input[type=email], select {
+	width:300px;
+	padding:5px 15px;
+	display:inline-block;
+	border:1px solid #ccc;
+	border-radius:4px;
+	box-sizing:border-box;
+}
+input[type=password], select {
+	width:300px;
+	padding:5px 15px;
+	display:inline-block;
+	border:1px solid #ccc;
+	border-radius:4px;
+	box-sizing:border-box;
+}
+
+input[type=submit] {
+	width:80%;
+	background-color: #F9DCC5;
+	color: black;
+	padding: 12px 10px;
+	cursor: pointer;
+}
+input[type=submit]:hover {
+	background-color:#50D0FF;
+}
+
+/*other tabss*/
+.purchaseTab button {
+	background-color: #F9DCC5;
+	color: black;
+	padding: 5px 10px;
+	width: 10%;
+	border: none;
+	outline: none;
+	text-align: left;
+	cursor: pointer;
+	transition: 0.3s;
+	font-size: 16px;
+}
+.purchaseTab button:hover{
+	background-color:#FFFFFF;
+}
+.purchaseTab button.active{
+	background-color:#FFFFFF;
+}
+
+.itemcontent {
+	float: left;
+	padding: 8px 12px;
+	background-color: #FFFFFF;
+	border-left: 4px solid #FFFFFF;
+	width: 80%;
+	min-height: 80vh;
+}
 
 /*------ Footer from pet profile ------*/ 
 
