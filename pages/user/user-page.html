@@ -91,21 +91,85 @@
 		<!--- Body as Tab --->
 		<div class = "body">
 			<div class="tab">
-				<button class="tablinks" onclick="openTab(event, 'Profile')" id="defaultOpen">Profile</button>
-				<button class="tablinks" onclick="openTab(event, 'Purchase')">Purchase</button>
-				<button class="tablinks" onclick="openTab(event, 'Account')">Account</button>
+				<button class="tablinks" onclick="openTab(event, 'Profile')" id="defaultOpen">My Profile</button>
+				<button class="tablinks" onclick="openTab(event, 'Purchase')">My Purchase</button>
+				<button class="tablinks" onclick="openTab(event, 'Account')">My Account</button>
 			</div>
+			
 			<div id="Profile" class="tabcontent">
-				<h2>Profile</h2>
-				<p>Insert contents here</p>
+				<h5>My Profile</h5>
+				<p>Manage your information here</p>
+					<div class = "profForm">
+						<form class="user">
+							<label for="username">Username:</label>
+							<input type="text" id="username" name="username" value=""><br>
+							<label for="fname">First Name:</label>
+							<input type="text" id="fname" name="fname" value=""><br>
+							<label for="lname">Last Name:</label>
+							<input type="text" id="lname" name="lname" value=""><br>
+							<label for="address">Home Address:</label>
+							<input type="text" id="address" name="address" value=""><br>
+							<label for="usercontact">Contact No.:</label>
+							<input type="text" id="usercontact" name="usercontact" value=""><br><br>
+							<!--
+							<h6>Gender:</h6>
+							<input type="radio" id="male" name="gender" value="male">
+							<label for="male">Male</label><br>
+							<input type="radio" id="female" name="gender" value="female">
+							<label for="Female">Female</label><br><br>
+							-->
+							<input type="submit" value="Save">
+						</form>
+					</div>
 			</div>
+			
 			<div id="Purchase" class="tabcontent">
-				<h2>Purchase</h2>
-				<p>Insert contents here</p>
+				<h5>My Purchase</h5>
+				<p>Track your purchase history</p>
+				<div class="purchaseTab">
+					<button class="itemlinks" onclick="itemTab(event, 'All')" id="defaultOpen">All</button>
+					<button class="itemlinks" onclick="itemTab(event, 'toPay')">To Pay</button>
+					<button class="itemlinks" onclick="itemTab(event, 'toShip')">To Ship</button>
+					<button class="itemlinks" onclick="itemTab(event, 'toRecv')">To Receive</button>
+				</div><!--need some script for this tab to work-->
+				
+				<!--content for each tab -->
+				<div id="All" class="itemcontent">
+					<p> content here </p>
+					<p> content here </p>
+					<p> content here </p>
+				</div>
+				<div id="toPay" class="itemcontent">
+					<p> content here </p>
+					<p> content here </p>
+				</div>
+				<div id="toShip" class="itemcontent">
+					<p> content here </p>
+					<p> content here </p>
+					<p> content here </p>
+					<p> content here </p>
+				</div>
+				<div id="toRecv" class="itemcontent">
+					<p> content here </p>
+					<p> content here </p>
+					<p> content here </p>
+				</div>
+				
 			</div>
+			
 			<div id="Account" class="tabcontent">
-				<h2>Account</h2>
-				<p>Insert contents here</p>
+				<h5>My Account</h5>
+				<p>Manage your account and password here</p>
+				<div class = "accForm">
+						<form class="user">
+							<label for="email">Email:</label>
+							<input type="email" id="email" name="email" value=""><br>
+							<label for="userpass">Password:</label>
+							<input type="password" id="userpass" name="userpass" value=""><br><br>
+							<input type="submit" value="Save"><br><br>
+							<input type="submit" value="Delete Account">
+						</form>
+					</div>
 			</div>
 			
 			<script>
@@ -123,8 +187,24 @@
 				  evt.currentTarget.className += " active";
 				}
 
+
+				function itemTab(evt, itemName) {
+				  var i, itemcontent, itemlinks;
+				  itemcontent = document.getElementsByClassName("itemcontent");
+				  for (i = 0; i < itemcontent.length; i++) {
+					itemcontent[i].style.display = "none";
+				  }
+				  itemlinks = document.getElementsByClassName("itemlinks");
+				  for (i = 0; i < itemlinks.length; i++) {
+					itemlinks[i].className = itemlinks[i].className.replace(" active", "");
+				  }
+				  document.getElementById(itemName).style.display = "block";
+				  evt.currentTarget.className += " active";
+				}
+
 				// Get the element with id="defaultOpen" and click on it
 				document.getElementById("defaultOpen").click();
+				
 			</script>
 		</div>
 		
