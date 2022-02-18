@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 18, 2022 at 05:03 PM
+-- Generation Time: Feb 18, 2022 at 05:44 PM
 -- Server version: 10.4.21-MariaDB
 -- PHP Version: 8.0.11
 
@@ -110,6 +110,33 @@ CREATE TABLE `tbl_products` (
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `tbl_rescueorg`
+--
+
+CREATE TABLE `tbl_rescueorg` (
+  `rescueOrgId` int(11) NOT NULL,
+  `org_name` varchar(255) NOT NULL,
+  `org_address` varchar(255) NOT NULL,
+  `org_description` text NOT NULL,
+  `org_contact` int(11) NOT NULL,
+  `org_email` varchar(255) NOT NULL,
+  `org_process` varchar(255) NOT NULL,
+  `createdAt` datetime NOT NULL,
+  `updatedAt` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `tbl_rescueorg`
+--
+
+INSERT INTO `tbl_rescueorg` (`rescueOrgId`, `org_name`, `org_address`, `org_description`, `org_contact`, `org_email`, `org_process`, `createdAt`, `updatedAt`) VALUES
+(3, 'Happy Paw Rescue', '4 Veterans RoadVeterans Center 1630', 'We rescue take unwanted, abandoned, abused, or stray pets and attempt to find suitable homes for them. We are dedicated to pet adoption.', 8384863, 'happypawrescue@gmail.com', 'Submit Application, Interview, Pay Fee (Php200), Home Check', '2022-02-18 21:47:47', '2022-02-18 13:47:47'),
+(4, 'Wagging Tail Rescue', '3F Hildevanne Food Corporation, 254 P. Burgos', 'We help and rescue stray pet adn find them new and suitable homes.', 321, 'wagtailrescue@gmail.com', 'Submit Application, Interview, Home Check, Pay Fee (Php100)', '2022-02-18 21:49:33', '2022-02-18 13:49:33'),
+(5, 'Sweet Whiskers Rescue', 'Lepanto Tiles, Silangan I', 'We provide shelter to stray, unwanted, abused pet. We promote pet adoption. Help our cause by donating what you can give.', 8221930, 'sweetwhiskers@gmail.com', 'Submit Application, Interview, Home Check', '2022-02-18 21:52:46', '2022-02-18 13:52:46');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `tbl_users`
 --
 
@@ -165,6 +192,12 @@ ALTER TABLE `tbl_products`
   ADD PRIMARY KEY (`productId`);
 
 --
+-- Indexes for table `tbl_rescueorg`
+--
+ALTER TABLE `tbl_rescueorg`
+  ADD PRIMARY KEY (`rescueOrgId`);
+
+--
 -- Indexes for table `tbl_users`
 --
 ALTER TABLE `tbl_users`
@@ -197,6 +230,12 @@ ALTER TABLE `tbl_pets`
 --
 ALTER TABLE `tbl_products`
   MODIFY `productId` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `tbl_rescueorg`
+--
+ALTER TABLE `tbl_rescueorg`
+  MODIFY `rescueOrgId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `tbl_users`
