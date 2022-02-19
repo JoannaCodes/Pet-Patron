@@ -12,7 +12,6 @@
                     <th scope="col">Contact No.</th>
                     <th scope="col">Email</th>
                     <th scope="col">Password</th>
-                    <th class"border-start" scope="col">Actions</th>
                 </tr>
             </thead>
             <tbody>
@@ -25,9 +24,6 @@
                     <td>0000</td>
                     <td>0000</td>
                     <td>0000</td>
-                    <td class"border-start">
-                        <button class="btn btn-danger mb-1" id="delete">Delete</button>
-                    </td>
                 </tr>
             </tbody>
         </table>
@@ -35,10 +31,6 @@
     </div>
     
     <p class="mt-3"><strong>Total Users: 0</strong></p>
-
-    <!-- Modals -->
-    <?php include '../admin/modals/deleteModal.php'; ?>
-    <!-- Modal -->
 
     <script>
         $(document).ready(function(){

@@ -20,6 +20,12 @@ h4 {
     font-size: 1.25rem;
 }
 
+body {
+    background-color: #F9DCC5;
+    /* background-image: linear-gradient(to bottom right, #FF7F50, #F9DCC5, #FFFFFF); */
+    background-image: linear-gradient(to bottom right, #FFFFFF, #FFFFFF, #F9DCC5, #FFFFFF, #FFFFFF);
+}
+
 p {
     font-size: 1.15rem;
     text-align: justify;
@@ -125,6 +131,7 @@ i {
 .card-box {
     border: 1px solid #DDDDDD;
     border-radius: 10px;
+    background-color: #FFFFFF;
 }
 
 .card-box .card-thumbnail {
@@ -139,6 +146,7 @@ h5 {
 .article div:nth-child(1) {
     border-radius: 10px;
     border-top: 10px solid #FF7F50;
+    background-color: #FFFFFF;
 }
 
 /* ------ */
@@ -199,6 +207,7 @@ h5 {
 
 .cet5 {
     text-align: center;
+    background-color: #FFFFFF;
 }
 
 /* Media Queries */
