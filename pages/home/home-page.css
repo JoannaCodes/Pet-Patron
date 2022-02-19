@@ -12,10 +12,13 @@
 /* ID */
 
 /* CLASS */
+
 .navbar {
     background-color: #FF7F50;
-    border-bottom-left-radius: 50px;
-    border-bottom-right-radius: 50px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    width: 100%;
+    height: 100px;
 }
 
 .dashboard .nav-link {
@@ -40,15 +43,206 @@
     align-items: center;
 }
 
-/* ------ */
+
+/* ------- BODY -------*/
+.body {
+    width: auto;
+    padding: 5px;
+    height: max-content;
+    text-align: center;
+    align-self: center;
+    position: relative;
+    background-image: linear-gradient(white,coral,rgb(255, 255, 255));
+}
+
+/**slide on intro**/
+* {box-sizing:border-box}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1400px;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.introSlides {
+  display: none;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+/**/
+.intro {
+    display: inline;
+    justify-content: center;
+    text-align: center;
+}
+.body h1 {
+    font-size: 36px;
+    font-weight: 600;
+}
+.adoptBtn {
+    background-color: coral;
+    display: block;
+    margin:auto;
+    text-decoration: none;
+    font-size: 15px;
+    color: whitesmoke;
+    padding: 12px 34px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: box-shadow .3s;
+    width: 50%; 
+}
+.adoptBtn a{
+    text-decoration: none;
+    font-size: 15px;
+    color: #212529;
+    padding: 12px 34px;
+    border-radius: 20px;
+    position: relative;
+    cursor: pointer;
+    transition: box-shadow .3s;
+    width: 50%; 
+}
+.adoptBtn:hover {
+    box-shadow: 0 5px 10px 5px rgba(33, 33, 33, .2);
+    background-color: #50D0FF;
+}
+/**products**/
+.buy-button {
+	background-color: #FF7F50;
+    color: whitesmoke;
+    padding: 12px;
+    border-radius: 20px;
+    transition: box-shadow .3s;
+}
+
+.buy-button a{
+	background-color: #FF7F50;
+    color: black;
+    padding: 12px;
+    border-radius: 20px;
+    transition: box-shadow .3s;
+	text-decoration: none;
+}
+
+.buy-button a:hover {
+	background-color: #FF7F50;
+    color: whitesmoke;
+    padding: 12px;
+    border-radius: 20px;
+    transition: box-shadow .3s;
+	text-decoration: none;
+}
+
+.buy {
+	background-color: #FF7F50;
+    color: black;
+    padding: 12px;
+    border-radius: 20px;
+    transition: box-shadow .3s;
+}
+
+.buy a {
+	background-color: #FF7F50;
+    color: whitesmoke;
+    padding: 12px;
+    border-radius: 20px;
+    transition: box-shadow .3s;
+}
+
+.product-col {
+    background-color: #e4e1eb;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07),
+        0 2px 4px rgba(0, 0, 0, 0.07),
+        0 4px 8px rgba(0, 0, 0, 0.07),
+        0 8px 16px rgba(0, 0, 0, 0.07),
+        0 16px 32px rgba(0, 0, 0, 0.07),
+        0 32px 64px rgba(0, 0, 0, 0.07);
+    border-radius: 20px;
+    border-left: none;
+    padding: 10px 10px;
+}
+
+.slide-col {
+    background-color: #e4e1eb;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07),
+        0 2px 4px rgba(0, 0, 0, 0.07),
+        0 4px 8px rgba(0, 0, 0, 0.07),
+        0 8px 16px rgba(0, 0, 0, 0.07),
+        0 16px 32px rgba(0, 0, 0, 0.07),
+        0 32px 64px rgba(0, 0, 0, 0.07);
+    border-radius: 10px;
+    padding: 12px 12px;
+}
+
+.slide-col img {
+    width: 600px;
+    height: 300px;
+    border-radius: 10px;
+}
+
+.info-col {
+    background-color: #e4e1eb;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07),
+        0 2px 4px rgba(0, 0, 0, 0.07),
+        0 4px 8px rgba(0, 0, 0, 0.07),
+        0 8px 16px rgba(0, 0, 0, 0.07),
+        0 16px 32px rgba(0, 0, 0, 0.07),
+        0 32px 64px rgba(0, 0, 0, 0.07);
+    border-radius: 10px;
+    padding: 20px 20px;
+}
+
+.info-col h1 {
+    text-align: center;
+    font-weight: 600;
+    margin: 15px 0;
+}
+
+.info-col p {
+    text-align: justify;
+    padding-top: 10px;
+}
+
+.goal p{
+    color: black;
+    width: 80%;
+    text-align: justify;
+    padding: 12px 36px;
+    border-radius: 10px;
+    margin: auto;
+    background-color: beige;
+}
+
+/* ----FOOTER---- */
 
 .footer {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
     background-color: #FF7F50;
-    border-top-left-radius: 50px;
-    border-top-right-radius: 50px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    max-height:770px;
 }
 
 .footer h4 {
@@ -89,4 +283,90 @@
 
 .cet5 {
     text-align: center;
+}
+
+.text-col {
+    text-align: left;
+}
+
+.text-col h1 {
+    font-size: 45px;
+    margin-bottom: 10px;
+}
+
+.text-col p {
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 15px;
+}
+
+.form-col {
+    background-color: #FFFFFF;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07),
+        0 2px 4px rgba(0, 0, 0, 0.07),
+        0 4px 8px rgba(0, 0, 0, 0.07),
+        0 8px 16px rgba(0, 0, 0, 0.07),
+        0 16px 32px rgba(0, 0, 0, 0.07),
+        0 32px 64px rgba(0, 0, 0, 0.07);
+    color: whitesmoke;
+    border-radius: 10px;
+    padding: 20px;
+    width: 10%;
+    min-height: 500px;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+input[type=text],
+input[type=email], textarea,
+select
+{
+    background-color: white;
+    color: #212529;
+    align-items: right;
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    resize: vertical;
+    font-size: 15px;
+}
+
+label
+{
+    color: black;
+    text-align: left;
+    margin: 1px;
+    font-size: 14px;
+}
+
+input[type=submit] {
+    background-color: coral;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #50D0FF;
+}
+
+hr {
+    margin-top: 50%;
+}
+
+#aboutus {
+    padding: 3px;
+    text-align: left;
+    width: 50%;
+}
+
+#developers {
+    text-align: right;
+    width: 50%;
 }

@@ -24,7 +24,7 @@
         <link rel="stylesheet" href="home-page.css">
 
         <!-- JS File -->
-        <link rel="stylesheet" href="home-page.js">
+        <script src="home-page.js"></script>
 
     </head>
 
@@ -89,87 +89,251 @@
             </div>
         </nav>
 
-        <div class="container vh-100">
-            BODY
+        <div class="body">
+            <div class="intro p-5">
+                <div>
+                    <!-- Slideshow container -->
+                    <div class="row slideshow-container">
+
+                        <!-- Full-width images with number and caption text -->
+                        <div class="introSlides">
+                            <img src="/assets/images/background/bg-4.png" style="width:100%">
+                        </div>
+                    
+                        <div class="introSlides">
+                            <img src="/assets/images/background/bg-1-1.png" style="width:100%">
+                        </div>
+                        
+                        <div class="introSlides">
+                            <img src="/assets/images/background/bg3.png" style="width:100%">   
+                        </div>
+
+                        <div class="introSlides">
+                            <img src="/assets/images/background/bg-2-2.png" style="width:100%">
+                        </div>
+                    <script type="text/javascript">
+                        showSlides();
+                    </script>
+
+                    <div class = "p-3">
+                        <h1>Looking for a cute lovable companion?</h1>
+                        <p>Welcome to Pet Patron! We are helping some organizaton to look for furever homes for their rescued animals. You can check our adoption page for more information! </p>
+                        <button class="adoptBtn"><a href="">Adopt a Pet</a></button>
+                    </div>
+                    
+                </div>
+                
+            </div>
+            <div class="product p-5">
+                <h1>Checkout our Products</h1>
+                    <div class="row">
+                        <div class="col product-col col-lg-3 col-md-4 col-12">
+                                <img class="cat-food mb-3" img src="/assets/images/products/cat_food.jfif" width="150" height="150" alt="">
+                                <div class="star">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <h6 class="product-name">Cat Food</h6>
+                                <h5 class="product-price">Php 899.00</h5>
+                                <button class="buy-button mb-3"><a href="shop-page-3.html">Buy Now</a></button>
+                        </div>
+                        <div class="col product-col col-lg-3 col-md-4 col-12">
+                            <img class="mouse-cat-toy mb-3" img src="/assets/images/products/cats_toy.jpg" width="150" height="150" alt="">
+                                <div class="star">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <h6 class="product-name">Mouse Cat Toy</h6>
+                            <h5 class="product-price">Php 60.00</h5>
+                            <button class="buy-button mb-3"><a href="shop-page-4.html">Buy Now</a></button>
+                        </div>
+                        <div class="col product-col col-lg-3 col-md-4 col-12">
+                            <img class="dog-bath mb-3" img src="/assets/images/products/dog.jpg" width="150" height="150" alt="">
+                            <div class="star">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <h6 class="product-name">Dog Shampoo and Conditioner Set</h6>
+                            <h5 class="product-price">Php 280.00</h5>
+                            <button class="buy-button mb-3"><a href="">Buy Now</a></button>
+                        </div>
+                        <div class="col product-col col-lg-3 col-md-4 col-12">
+                            <img class="cat-stufftoy mb-3" img src="/assets/images/products/dogs_toy1.jpeg" width="150" height="150" alt="">
+                            <div class="star">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <h6 class="product-name">Dog Stuffed Toy</h6>
+                            <h5 class="product-price">Php 80.00</h5>
+                            <button class="buy-button mb-3"><a href="">Buy Now</a></button>
+                        </div>
+                    </div>
+                    <div class="row p-5">
+                        <h1 id="about">About Us</h1>
+                        <div class="col slide-col">
+                            <img class="slides" src="/assets/images/slides/slide1.png">
+                            <img class="slides" src="/assets/images/slides/slide2.png">
+                            <img class="slides" src="/assets/images/slides/slide3.png">
+                            <img class="slides" src="/assets/images/slides/slide4.png">
+                            <img class="slides" src="/assets/images/slides/slide5.png">
+                            <img class="slides" src="/assets/images/slides/slide6.png">
+                        </div>
+                        <script type="text/javascript">
+                            carousel();
+                        </script>
+                
+                        <div class="col info-col">
+                            <h2>Lorem Ipsum</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                                magna
+                                aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                consequat. Duis
+                                aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
+                                sint
+                                occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        </div>
+                    </div>
+                <h1>Our Goal</h1>
+                <div class="goal">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                            magna
+                            aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                            consequat. Duis
+                            aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
+                            sint
+                            occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                                magna
+                                aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                consequat. Duis
+                                aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
+                                sint
+                                occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </div>
         </div>
+    </div>
 
         <!-- Footer -->
         <div class="container-fluid mt-5">
             <div class="footer row p-5">
-                <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+                <div class="col text-col">
                     <img class="img-fluid mb-2" src="/assets/images/logo/pet_patron_logo1.png" alt="Pet Patron">
+                    <h1>Reach Us</h1>
+                    <p><h3 style="color: #000000;">info@pet-patron.com</h3></p>
                     <p>
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste atque ea quis
-                        molestias. Fugiat pariatur maxime quis culpa corporis vitae repudiandae aliquam
-                        voluptatem veniam, est atque cumque eum delectus sint!
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                    magna
+                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                    consequat. Duis
+                    aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
+                    sint
+                    occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                     </p>
+                    <br><br><br>
+                </div>
+                <div class="col form-col">
+                    <form action="#">
+                        <label for="fname">First Name</label>
+                        <input type="text" id="fname" name="firstname" placeholder="Your name..">
+                        <br>
+                
+                        <label for="lname">Last Name</label>
+                        <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+                        <br>
+                
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="Email Address..">
+                        <br>
+                
+                        <label for="subject">Subject</label>
+                        <textarea id="subject" name="subject" placeholder="Write something.." style="height:200"></textarea>
+                        <br>
+                
+                        <input type="submit" value="Submit"><br>
+                
+                    </form>
+                </div>
+                <hr>
+                <div class="row" id="devs">
+                    <div class="text-col col-lg-5 col-md-8" id="aboutus">
+                        <h4>About Us</h4>
+        
+                        <ul class="quick-links list-unstyled mb-0">
+                            <li>
+                                <a href="/pages/home/home-page.html">Home</a>
+                            </li>
+                            <li>
+                                <a href="/pages/adoption/adoption-page.html">Adopt A Pet</a>
+                            </li>
+                            <li>
+                                <a href="/pages/shop/shop-page.html">Shop</a>
+                            </li>
+                            <li>
+                                <a href="/pages/home/home-page.html#about">About</a>
+                            </li>
+                            <li>
+                                <a href="/pages/home/home-page.html#contact">Contact Us</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-5 col-md-8" id="developers">
+                            <h4>Developers</h4>
+                
+                            <ul class="dev-links list-unstyled">
+                                <li>
+                                    <!-- Email -->
+                                    <a href="#!" class="">Joanna Marie B. Lara</a>
+                                    <br>
+                                    <!-- Social Media -->
+                                    <a class="btn btn-floating m-1" href="#!" role="button">
+                                        <i class="fab fa-facebook-f"></i>
+                                    </a>
+                                    <a class="btn btn-floating m-1" href="#!" role="button">
+                                        <i class="fab fa-twitter"></i>
+                                    </a>
+                                    <a class="btn btn-floating m-1" href="#!" role="button">
+                                        <i class="fab fa-linkedin-in"></i>
+                                    </a>
+                                    <a class="btn btn-floating m-1" href="#!" role="button">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <!-- Email -->
+                                    <a href="#!">Queennie Marie S. Llido</a>
+                                    <br>
+                                    <!-- Social Media -->
+                                    <a class="btn btn-floating m-1" href="#!" role="button">
+                                        <i class="fab fa-facebook-f"></i>
+                                    </a>
+                                    <a class="btn btn-floating m-1" href="#!" role="button">
+                                        <i class="fab fa-twitter"></i>
+                                    </a>
+                                    <a class="btn btn-floating m-1" href="#!" role="button">
+                                        <i class="fab fa-linkedin-in"></i>
+                                    </a>
+                                    <a class="btn btn-floating m-1" href="#!" role="button">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                    <!-- Social Media -->
+                                </li>
+                            </ul>
+                    </div>
                 </div>
         
-                <div class="col-lg-3 col-md-6 mt-md-4 mb-4 mb-md-0">
-                    <h4>About</h4>
-        
-                    <ul class="quick-links list-unstyled mb-0">
-                        <li>
-                            <a href="/pages/home/home-page.html">Home</a>
-                        </li>
-                        <li>
-                            <a href="/pages/adoption/adoption-page.html">Adopt A Pet</a>
-                        </li>
-                        <li>
-                            <a href="/pages/shop/shop-page.html">Shop</a>
-                        </li>
-                        <li>
-                            <a href="/pages/home/home-page.html#about">About</a>
-                        </li>
-                        <li>
-                            <a href="/pages/home/home-page.html#contact">Contact Us</a>
-                        </li>
-                    </ul>
-                </div>
-        
-                <div class="col-lg-3 col-md-6 mt-md-4 mb-4 mb-md-0">
-                    <h4>Developers</h4>
-        
-                    <ul class="dev-links list-unstyled">
-                        <li>
-                            <!-- Email -->
-                            <a href="#1" class="">Joanna Marie B. Lara</a>
-                            <br>
-                            <!-- Social Media -->
-                            <a class="btn btn-floating m-1" href="#!" role="button">
-                                <i class="fab fa-facebook-f"></i>
-                            </a>
-                            <a class="btn btn-floating m-1" href="#!" role="button">
-                                <i class="fab fa-twitter"></i>
-                            </a>
-                            <a class="btn btn-floating m-1" href="#!" role="button">
-                                <i class="fab fa-linkedin-in"></i>
-                            </a>
-                            <a class="btn btn-floating m-1" href="#!" role="button">
-                                <i class="fab fa-github"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <!-- Email -->
-                            <a href="#!">Queennie Marie S. Llido</a>
-                            <br>
-                            <!-- Social Media -->
-                            <a class="btn btn-floating m-1" href="#!" role="button">
-                                <i class="fab fa-facebook-f"></i>
-                            </a>
-                            <a class="btn btn-floating m-1" href="#!" role="button">
-                                <i class="fab fa-twitter"></i>
-                            </a>
-                            <a class="btn btn-floating m-1" href="#!" role="button">
-                                <i class="fab fa-linkedin-in"></i>
-                            </a>
-                            <a class="btn btn-floating m-1" href="#!" role="button">
-                                <i class="fab fa-github"></i>
-                            </a>
-                            <!-- Social Media -->
-                        </li>
-                    </ul>
-                </div>
+                
             </div>
         </div>
         <!-- CET5 -->
