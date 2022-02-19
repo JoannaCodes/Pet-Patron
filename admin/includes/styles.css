@@ -23,7 +23,20 @@ h4 {
     font-size: 1.563rem;
 }
 
-tbody tr:hover {
+table {
+    table-layout: auto;
+}
+
+table tr {
+    height: 1em;
+}
+
+th, td {
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+table tr:hover {
     background-color: #F0F1F3;
     cursor: pointer;
 }
@@ -106,7 +119,7 @@ tbody tr:hover {
     overflow: hidden;
 }
 
-#summarystats.row{
+#summarystats.row {
     overflow: visible;
 }
 

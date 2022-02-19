@@ -12,7 +12,7 @@
                     <th scope="col">Description</th>
                     <th scope="col">Price</th>
                     <th scope="col">Stocks</th>
-                    <th class"border-start" scope="col">Actions</th>
+                    <th scope="col">Actions</th>
                 </tr>
             </thead>
             <tbody>
@@ -36,7 +36,6 @@
 
     <!-- Modals -->
     <?php include '../admin/modals/inventoryModals.php'; ?>
-    <?php include '../admin/modals/deleteModal.php'; ?>
     <!-- Modal -->
 
     <script>
