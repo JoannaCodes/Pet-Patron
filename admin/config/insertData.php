@@ -95,4 +95,32 @@
         //close connection
         mysqli_close($conn);
     }
+        /**Adding products */
+    if(isset($_POST['saveBtn'])){
+
+        //$product_id = $_POST['product_id'];
+        $name = $_POST['product_name'];
+        $description = mysqli_real_escape_string($conn, $_POST['product_description']);
+
+        $filename = basename($_FILES["product_image"]["name"]);  
+        $price = $_POST['product_price'];
+        $stock = $_POST['product_stocks'];
+
+        $query = "INSERT INTO tbl_products (product_name, product_description, product_image, product_price, product_stocks, createdAt, updatedAt)
+        VALUES ('$name','$description','$filename', '$price', '$stock', NOW())";
+        
+        $query_run = mysqli_query($conn, $query);
+
+        if($query_run)
+        {
+            echo '<script> alert("Data Saved"); </script>';
+        }
+        else
+        {
+            echo '<script> alert("Data Not Saved"); </script>';
+        }
+
+        //close connection
+        mysqli_close($conn);
+    }
 ?>
