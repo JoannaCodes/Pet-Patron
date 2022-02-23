@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 22, 2022 at 12:59 PM
+-- Generation Time: Feb 23, 2022 at 03:13 PM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 8.0.13
 
@@ -100,13 +100,20 @@ CREATE TABLE `tbl_pets` (
 CREATE TABLE `tbl_products` (
   `productId` int(11) NOT NULL,
   `product_name` varchar(255) NOT NULL,
-  `product_image` blob NOT NULL,
+  `product_image` varchar(255) NOT NULL,
   `product_description` text NOT NULL,
   `product_price` int(11) NOT NULL,
   `product_stocks` int(11) NOT NULL,
   `createdAt` datetime NOT NULL,
   `updatedAt` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `tbl_products`
+--
+
+INSERT INTO `tbl_products` (`productId`, `product_name`, `product_image`, `product_description`, `product_price`, `product_stocks`, `createdAt`, `updatedAt`) VALUES
+(100, 'Cat Food', '', 'sample', 100, 1, '2022-02-23 22:05:33', '2022-02-23 14:05:33');
 
 -- --------------------------------------------------------
 
@@ -212,7 +219,7 @@ ALTER TABLE `tbl_users`
 -- AUTO_INCREMENT for table `tbl_admin`
 --
 ALTER TABLE `tbl_admin`
-  MODIFY `adminId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `adminId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `tbl_orders`
@@ -230,13 +237,13 @@ ALTER TABLE `tbl_pets`
 -- AUTO_INCREMENT for table `tbl_products`
 --
 ALTER TABLE `tbl_products`
-  MODIFY `productId` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `productId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=101;
 
 --
 -- AUTO_INCREMENT for table `tbl_rescueorg`
 --
 ALTER TABLE `tbl_rescueorg`
-  MODIFY `rescueOrgId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `rescueOrgId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `tbl_users`
