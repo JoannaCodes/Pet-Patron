@@ -31,7 +31,8 @@ table tr {
     height: 1em;
 }
 
-th, td {
+th,
+td {
     overflow: hidden;
     white-space: nowrap;
 }
@@ -164,6 +165,23 @@ table tr:hover {
 
 .btn-custom {
     background-color: #FF7F50;
+}
+
+.login-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+} 
+
+.login-form {
+    background: #FF7F50;
+    border-radius: 10px;
+    width: 40%;
+}
+
+.login-form-heading {
+    text-align: center;
 }
 
 @media only screen and (max-width:480px) {
