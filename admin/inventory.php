@@ -9,6 +9,7 @@
                 <tr>
                     <th scope="col">Product Id</th>
                     <th scope="col">Product Name</th>
+                    <th scope="col">Product Image</th>
                     <th scope="col">Description</th>
                     <th scope="col">Price</th>
                     <th scope="col">Stocks</th>
@@ -16,7 +17,7 @@
                 </tr>
             </thead>
             <tbody>
-            <?php
+                <?php
                     include "../admin/config/connection.php";
 
                     $sql = "SELECT * FROM tbl_products";
@@ -25,8 +26,9 @@
                     foreach($product as $row){
                         ?>
                             <tr>
-                                <td><?php echo $row['product_id']; ?></td>
+                                <td><?php echo $row['productId']; ?></td>
                                 <td><?php echo $row['product_name']; ?></td>
+                                <td><?php echo $row['product_image']; ?></td>
                                 <td><?php echo $row['product_description']; ?></td>
                                 <td><?php echo $row['product_price']; ?></td>
                                 <td><?php echo $row['product_stocks']; ?></td>
@@ -46,7 +48,7 @@
     </div>
     
     <p class="mt-3"><strong>Total: 0</strong></p>
-
+    <iframe name="content"></iframe>
     <!-- Modals -->
     <?php include '../admin/modals/inventoryModals.php'; ?>
     <!-- Modal -->
@@ -63,7 +65,7 @@
             });
 
             $("#addItemModal #saveBtn").click(function(){
-                $("#addItemModal").hide();
+                 $("#addItemModal").hide();
             });
         });
     </script>
@@ -86,8 +88,8 @@
                 
                 $('#product_id').val(data[0]);
                 $('#product_name').val(data[1]);
-                $('#product_description').val(data[2]);
-                $('#product_image').val(data[3]);
+                $('#product_image').val(data[2]);
+                $('#product_description').val(data[3]);
                 $('#product_price').val(data[4]);
                 $('#product_stocks').val(data[5]);
 
@@ -97,7 +99,7 @@
                 $("#editItemModal").hide();
             });
 
-            $("#editItemModal #editItemBtn").click(function(){
+            $("#editItemModal #editBtn").click(function(){
                 $("#editItemModal").hide();
             });
         });
