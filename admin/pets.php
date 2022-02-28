@@ -1,3 +1,11 @@
+<?php
+    include "../admin/config/connection.php";
+
+    $sql = "SELECT * FROM tbl_pets 
+            INNER JOIN tbl_rescueorg ON tbl_pets.rescueOrgId = tbl_rescueorg.rescueOrgId";
+    $pets = mysqli_query($conn, $sql);
+    $rowcount = mysqli_num_rows($pets)
+?>
 <div class="container p-5">
     <div class="row p-3 shadow" id="table">
         <div class="d-grid gap-2 d-md-block">
@@ -5,62 +13,57 @@
         </div>
         <div class="mt-3 overflow-auto">
             <table class="table table-responsive" id="petTable">
-            <thead>
-                <tr>
-                    <th scope="col">Id</th>
-                    <th scope="col">Rescue Org</th>
-                    <th scope="col">Name</th>
-                    <th scope="col">Age</th>
-                    <th scope="col">Gender</th>
-                    <th scope="col">Size</th>
-                    <th scope="col">Weight</th>
-                    <th scope="col">Sterilization</th>
-                    <th scope="col">Description</th>
-                    <th scope="col">Image</th>
-                    <th scope="col">Created At</th>
-                    <th scope="col">Updated At</th>
-                    <th scope="col">Actions</th>
-                </tr>
-            </thead>
-            <tbody>
-                <?php
-                    include "../admin/config/connection.php";
-
-                    $sql = "SELECT * FROM tbl_pets 
-                            INNER JOIN tbl_rescueorg ON tbl_pets.rescueOrgId = tbl_rescueorg.rescueOrgId";
-                    $pets = mysqli_query($conn, $sql);
-                    
-                    foreach($pets as $row){
-                        ?>
-                            <tr>
-                                <td><?php echo $row['petId']; ?></td>
-                                <td><?php echo $row['org_name']; ?></td>
-                                <td><?php echo $row['pet_name']; ?></td>
-                                <td><?php echo $row['pet_age']; ?></td>
-                                <td><?php echo $row['pet_gender']; ?></td>
-                                <td><?php echo $row['pet_size']; ?></td>
-                                <td><?php echo $row['pet_weight']; ?></td>
-                                <td><?php echo $row['pet_sterilization']; ?></td>
-                                <td><?php echo $row['pet_description']; ?></td>
-                                <td><?php echo $row['pet_image']; ?></td>
-                                <td><?php echo $row['createdAt']; ?></td>
-                                <td><?php echo $row['updatedAt']; ?></td>
-                                <td>
-                                    <button class="btn btn-warning mb-1" id="editBtn">Edit</button>
-                                    <button class="btn btn-danger mb-1" id="deleteBtn">Delete</button>
-                                </td>
-                            </tr>
-                        <?php
-                    }
-
-                    mysqli_close($conn); 
-                ?>
-            </tbody>
-        </table>
+                <thead>
+                    <tr>
+                        <th scope="col">Id</th>
+                        <th scope="col">Rescue Org</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Age</th>
+                        <th scope="col">Gender</th>
+                        <th scope="col">Size</th>
+                        <th scope="col">Weight</th>
+                        <th scope="col">Sterilization</th>
+                        <th scope="col">Description</th>
+                        <th scope="col">Image</th>
+                        <th scope="col">Created At</th>
+                        <th scope="col">Updated At</th>
+                        <th scope="col">Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php            
+                        foreach($pets as $row){
+                            ?>
+                                <tr>
+                                    <td><?php echo $row['petId']; ?></td>
+                                    <td><?php echo $row['org_name']; ?></td>
+                                    <td><?php echo $row['pet_name']; ?></td>
+                                    <td><?php echo $row['pet_age']; ?></td>
+                                    <td><?php echo $row['pet_gender']; ?></td>
+                                    <td><?php echo $row['pet_size']; ?></td>
+                                    <td><?php echo $row['pet_weight']; ?></td>
+                                    <td><?php echo $row['pet_sterilization']; ?></td>
+                                    <td><?php echo $row['pet_description']; ?></td>
+                                    <td><?php echo $row['pet_image']; ?></td>
+                                    <td><?php echo $row['createdAt']; ?></td>
+                                    <td><?php echo $row['updatedAt']; ?></td>
+                                    <td>
+                                        <button class="btn btn-warning mb-1" id="editBtn">Edit</button>
+                                        <button class="btn btn-danger mb-1" id="deleteBtn">Delete</button>
+                                    </td>
+                                </tr>
+                            <?php
+                        }
+                    ?>
+                </tbody>
+            </table>
         </div>
     </div>
 
+    <p class="mt-3">Manually Refresh Table when change is made</p>
+    <p class="mt-3"><strong>Total: <?php echo $rowcount; ?></strong></p>
     <iframe name="content"></iframe>
+    <?php mysqli_close($conn); ?>
 
     <!-- Modals -->
     <?php include '../admin/modals/petsModals.php'; ?>

@@ -13,13 +13,13 @@
         <div class="dashboard collapse navbar-collapse" id="navbar">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link" href="/pages/home/home-page.html">Home</a>
+              <a class="nav-link" href="home.php">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/pages/adoption/adoption-page.html">Adopt a Pet</a>
+              <a class="nav-link" href="adopt.php">Adopt a Pet</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/pages/shop/shop-page.html">Shop</a>
+              <a class="nav-link" href="shop.php">Shop</a>
             </li>
           </ul>
           <hr>

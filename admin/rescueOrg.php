@@ -1,3 +1,10 @@
+<?php
+    include "../admin/config/connection.php";
+
+    $sql = "SELECT * FROM tbl_rescueorg";
+    $admins = mysqli_query($conn, $sql);
+    $rowcount = mysqli_num_rows($admins)
+?>
 <div class="container p-5">
     <div class="row p-3 shadow" id="table">
         <div class="d-grid gap-2 d-md-block">
@@ -22,12 +29,7 @@
             </thead>
             <tbody>
                 <?php
-                    include "../admin/config/connection.php";
-
-                    $sql = "SELECT * FROM tbl_rescueorg";
-                    $admin = mysqli_query($conn, $sql);
-
-                    foreach($admin as $row){
+                    foreach($admins as $row){
                         ?>
                             <tr>
                                 <td><?php echo $row['rescueOrgId']; ?></td>
@@ -47,16 +49,15 @@
                             </tr>
                         <?php
                     }
-
-                    mysqli_close($conn);
                 ?>
             </tbody>
         </table>
         </div>
     </div>
     <p class="mt-3">Manually Refresh Table when change is made</p>
-
+    <p class="mt-3"><strong>Total Users: <?php echo $rowcount; ?></strong></p>
     <iframe name="content"></iframe>
+    <?php mysqli_close($conn); ?>
 
     <!-- Modals -->
     <?php include '../admin/modals/orgModals.php'; ?>

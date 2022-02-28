@@ -1,7 +1,10 @@
 <?php include 'includes/header.php'; ?>
 
     <link rel="stylesheet" href="includes/styles.css">
+    <link rel="stylesheet" href="includes/adopt.css">
     <script src="includes/adoption-page.js"></script>
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v13.0" nonce="YLDgq7iH"></script>
     <?php include 'includes/navbar.php'; ?>
 
     <div class="container p-4">
@@ -43,16 +46,16 @@
                         foreach($pet as $row){
                             ?>
                                 <div class="col pe-md-3">
-                                    <a class="card-pet" href="pet-profile.php?petId=<?php echo $row['petId'] ?>">
+                                    <a class="card-pet" href="pet-profile.php?pet-id=<?php echo $row['petId'] ?>">
                                         <div class="card-box shadow mb-3 mh-100">
                                             <div class="card-thumbnail m-2">
-                                                <img src="uploads/pets/<?php echo $row['pet_image'] ?>" class="img-fluid w-100" alt="profile photo"
+                                                <img src="uploads/pets/<?php echo $row['pet_image'] ?>" class="img-fluid" alt="pet-photo"
                                                 width="250px" height="250px">
                                             </div>
                                             <div class="card-body px-3 pb-1">
-                                                <h3><?php echo $row['pet_name'] ?></h3>
-                                                <h4><?php echo $row['pet_gender'] ?></h4>
-                                                <h4>Age: <?php echo $row['pet_age'] ?> year/s</h4>
+                                                <h2><?php echo $row['pet_name'] ?></h2>
+                                                <h6><?php echo $row['pet_gender'] ?></h6>
+                                                <h6>Age: <?php echo $row['pet_age'] ?></h6>
                                             </div>
                                         </div>
                                     </a>
@@ -94,7 +97,7 @@
                         ipsum adipisci distinctio suscipit laborum.
                     </p>
                     
-                    <i class="fab fa-facebook-f"></i>
+                    <div class="fb-share-button" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button" data-size="large"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a></div>
                 </div>
             </div>
         </div>

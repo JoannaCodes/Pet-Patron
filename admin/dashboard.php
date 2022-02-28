@@ -3,30 +3,36 @@
 
     $sql = "SELECT petId, org_name, pet_name, pet_age, pet_gender FROM tbl_pets
             INNER JOIN tbl_rescueorg ON tbl_pets.rescueOrgId = tbl_rescueorg.rescueOrgId
-            ORDER BY petId DESC LIMIT 0,5";
-    $sql2 = "SELECT petId, org_name, pet_name, pet_age, pet_gender FROM tbl_pets
-            INNER JOIN tbl_rescueorg ON tbl_pets.rescueOrgId = tbl_rescueorg.rescueOrgId";
+            ORDER BY petId DESC LIMIT 5";
     $pets = mysqli_query($conn, $sql);
-    $rowcount = mysqli_num_rows(mysqli_query($conn, $sql2))
+    $petcount = mysqli_num_rows($pets);
+
+    $sql2 = "SELECT * FROM tbl_orders ORDER BY createdAt LIMIT 5";
+    $orders = mysqli_query($conn, $sql2);
+    $ordercount = mysqli_num_rows($orders);
+
+    $sql3 = "SELECT * FROM tbl_users";
+    $users = mysqli_query($conn, $sql3);
+    $usercount = mysqli_num_rows($users);
 ?>
 <div class="container p-5">
     <div class="row" id="summary-stats">
         <div class="col-md-4 p-1">
             <div class="p-4 shadow" id="stats">
                 <p>Pets for Adoption</p>
-                <h2><?php echo $rowcount; ?></h2>
+                <h2><?php echo $petcount; ?></h2>
             </div>
         </div>
         <div class="col-md-4 p-1">
             <div class="p-4 shadow" id="stats">
                 <p>Orders</p>
-                <h2>0</h2>
+                <h2><?php echo $ordercount; ?></h2>
             </div>
         </div>
         <div class="col-md-4 p-1">
             <div class="p-4 shadow" id="stats">
                 <p>Users</p>
-                <h2>0</h2>
+                <h2><?php echo $usercount; ?></h2>
             </div>
         </div>
     </div>
@@ -58,8 +64,6 @@
                         </tr>
                     <?php
                     }
-
-                    mysqli_close($conn);
                 ?>
             </tbody>
         </table>
@@ -70,6 +74,7 @@
         <div class="col-md-6 p-1 mb-3">
             <div class="p-3 shadow" id="table">
                 <h4 class="mb-3">Recent Orders</h4>
+                <small>*Click to View Full Information</small>
                 <div class="overflow-auto">
                     <table class="table table-responsive" id="orderSummary">
                     <thead>
@@ -81,12 +86,7 @@
                     </thead>
                     <tbody>
                         <?php
-                            include "../admin/config/connection.php";
-
-                            $sql = "SELECT * FROM tbl_orders ORDER BY createdAt LIMIT 5";
-                            $order = mysqli_query($conn, $sql);
-                            
-                            foreach($order as $row){
+                            foreach($orders as $row){
                                 ?>
                                     <tr>
                                         <th><?php echo $row['orderId']; ?></th>
@@ -95,17 +95,16 @@
                                     </tr>
                                 <?php 
                             }
-
-                            mysqli_close($conn);
                         ?>
                     </tbody>
                 </table>
                 </div>
             </div>
         </div>
-        <div class="col-md-6 p-1">
+        <div class="col-md-6 p-1 mb-3">
             <div class="p-3 shadow"  id="table">
                 <h4 class="mb-3">New Registered Users</h4>
+                <small>*Click to View Full Information</small>
                 <div class="overflow-auto">
                     <table class="table table-responsive" id="userSummary">
                     <thead>
@@ -116,11 +115,6 @@
                     </thead>
                     <tbody>
                         <?php
-                            include "../admin/config/connection.php";
-
-                            $sql = "SELECT userId, user_name FROM tbl_users";
-                            $users = mysqli_query($conn, $sql);
-                            
                             foreach($users as $row){
                                 ?>
                                     <tr>
@@ -129,8 +123,6 @@
                                     </tr>
                                 <?php 
                             }
-
-                            mysqli_close($conn);
                         ?>
                     </tbody>
                 </table>
@@ -138,6 +130,7 @@
             </div>
         </div>
     </div>
+    <?php mysqli_close($conn); ?>
     
     <!-- Modals -->
     <?php include '../admin/modals/userModal.php'; ?>

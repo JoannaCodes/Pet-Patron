@@ -1,0 +1,95 @@
+/* home-page */
+.introSlides {
+    display: none;
+    /* Hide the images by default */
+}
+
+.slide {
+    border-radius: 10px;
+    width: 100%;
+}
+
+.indicators {
+    text-align: center
+}
+
+.intro {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.btn-adopt {
+    background-color: #FF7F50;
+    border-radius: 20px;
+    transition: 0.5s;
+}
+
+.btn-adopt:hover {
+    background-color: #50D0FF;
+}
+
+/* ------ */
+.product {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-product {
+    background-color: #FF7F50;
+    border-radius: 20px;
+    transition: 0.5s;
+}
+
+.btn-product:hover {
+    background-color: #50D0FF;
+}
+
+.product-group>.row {
+    overflow-x: auto;
+    flex-wrap: nowrap;
+}
+
+.product-group>.row>.col-md-4 {
+    display: inline-block;
+    float: none;
+}
+
+.product-gallery {
+    text-align: center;
+}
+
+.product-gallery .card-box {
+    border-radius: 10px;
+    background-color: #FFFFFF;
+}
+
+/* ------ */
+.about {
+    display: flex;
+    justify-content: center;
+    background-color: #FF7F50;
+    border-radius: 50px;
+}
+
+.info-col {
+    background-color: #FFFFFF;
+    background-image: url('/assets/images/background/bg2-2.png');
+    background-size: cover;
+    border-radius: 10px;
+}
+
+.contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-form {
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    width: 50%;
+}
+
+/* home-page */
