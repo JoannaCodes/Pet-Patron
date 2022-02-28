@@ -68,13 +68,7 @@
                 </div>
                 <div class="info-col col-md-6 p-5 shadow">
                     <h1 class="mb-3">About Us</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                        magna
-                        aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                        consequat. Duis
-                        aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
-                        sint
-                        occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <p> We are student from Bachelor of Science in Computer Engineering in Polytechnic University of the Philippines - Main. Our goal is to help organizations who rescues and  offer adoption of stray animals who are looking for family. We will be able to help the organization and the future adopters of the animals to track and to record the information about them and the pet that they will consider to adopt. For now, this site is a project for our subject, Computer Engineering Technology 5: Web Development. In the future, we are hoping to make this website much more useful and helpful for the web community and also to improve what we need to improve.</p>
                 </div>
             </div>
 

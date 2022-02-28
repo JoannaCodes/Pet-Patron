@@ -73,28 +73,25 @@
                 <div class="shadow p-4">
                     <h3>Did you know?</h2>
                     <p>
-                        ipsum dolor sit amet consectetur adipisicing elit.
-                        Atque sapiente molestiae iste esse iusto blanditiis dicta
-                        perferendis vero molestias quae, possimus quis libero unde impedit
-                        ipsum adipisci distinctio suscipit laborum.
+                         🐾 With animal shelters full, millions of stray dogs and cats roam the Philippines.
+                    </p>
+                    <p>
+                         🐾 Mitzi Cruz, shelter manager, of the Philippine Animal Welfare Society of the Philippines (PAWS Philippines), and Heidi Marquez-Caguioa, a lawyer and the program director of Animal Kingdom Foundation (AKF), both noted that adopting enables an individual to “help save lives” and “make a difference.” Read more <a href="https://pop.inquirer.net/111424/no-pets-left-behind-heres-why-adopting-can-make-a-huge-difference">here</a>.
                     </p>
                     <hr>
                     <h3>Info</h3>
                     <p>
-                        ipsum dolor sit amet consectetur adipisicing elit.
-                        Atque sapiente molestiae iste esse iusto blanditiis dicta
-                        perferendis vero molestias quae, possimus quis libero unde impedit
-                        ipsum adipisci distinctio suscipit laborum.
+                    🐾 Pet adoption is the process of transferring responsibility for a pet that was previously owned by another party such as a person, shelter, or rescue organization. Common sources for adoptable pets are animal shelters and rescue groups. Some organizations give adopters ownership of the pet, while others use a guardianship model wherein the organization retains some control over the animal's future use or care.
+                    </p>
+                    <p>
+                    🐾 Online pet adoption sites have databases of pets being housed by thousands of animal shelters and rescue groups, and are searchable by the public.
                     </p>
                 </div>
 
                 <div class="mt-5 pt-4">
-                    <h3>Social Media</h3>
+                     <h3>🐾 Social Media 🐾</h3>
                     <p>
-                        ipsum dolor sit amet consectetur adipisicing elit.
-                        Atque sapiente molestiae iste esse iusto blanditiis dicta
-                        perferendis vero molestias quae, possimus quis libero unde impedit
-                        ipsum adipisci distinctio suscipit laborum.
+                        Have you consider adopting a pet? If not, you can also help us by sharing our site to spread information about us and adoption!
                     </p>
                     
                     <div class="fb-share-button" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button" data-size="large"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a></div>
@@ -107,17 +104,9 @@
         <!-- Description -->
         <div class="desc row mt-5 mx-0">
             <h1>Our Goal</h1>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos ab quis deserunt obcaecati!
-                Ullam dolor magni debitis dicta tempora. Voluptatem amet eius quas nostrum vel recusandae beatae sapiente! 
-                Iste, nisi. ipsum dolor sit amet consectetur adipisicing elit. Atque sapiente molestiae 
-                iste esse iusto blanditiis dicta perferendis vero molestias quae, possimus quis libero unde
-                impedit ipsum adipisci distinctio suscipit laborum.</p>
+            <p>Our goal main goal is to help stray and rescue animals to have their own home and have a loving family. Also, helping the organization to let them use our site for easier tracking of adopter for our lovely animals!</p>
             
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos ab quis deserunt obcaecati!
-                Ullam dolor magni debitis dicta tempora. Voluptatem amet eius quas nostrum vel recusandae beatae sapiente!
-                Iste, nisi. ipsum dolor sit amet consectetur adipisicing elit. Atque sapiente molestiae
-                iste esse iusto blanditiis dicta perferendis vero molestias quae, possimus quis libero unde
-                impedit ipsum adipisci distinctio suscipit laborum.</p>
+            <p>Other than adoption processing, we also offer some of our products that might help to bond and have fun with your furry friend.</p>
         </div>
     </div>
 <?php include 'includes/footer.php'; ?>
