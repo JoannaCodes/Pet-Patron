@@ -89,7 +89,7 @@
         </nav>
 
 		<!--- Body as Tab --->
-		<div class = "body">
+		<div class = "user_body pd-5">
 			<div class="tab">
 				<button class="tablinks" onclick="openTab(event, 'Profile')" id="defaultOpen">My Profile</button>
 				<button class="tablinks" onclick="openTab(event, 'Purchase')">My Purchase</button>
@@ -127,34 +127,81 @@
 				<h5>My Purchase</h5>
 				<p>Track your purchase history</p>
 				<div class="purchaseTab">
-					<button class="itemlinks" onclick="itemTab(event, 'All')" id="defaultOpen">All</button>
-					<button class="itemlinks" onclick="itemTab(event, 'toPay')">To Pay</button>
-					<button class="itemlinks" onclick="itemTab(event, 'toShip')">To Ship</button>
-					<button class="itemlinks" onclick="itemTab(event, 'toRecv')">To Receive</button>
+					<button class="itemlinks" onclick="itemTab(event, 'Cart')" id="defaultOpen">Cart</button>
+					<button class="itemlinks" onclick="itemTab(event, 'Orders')">Orders</button>
 				</div><!--need some script for this tab to work-->
 				
 				<!--content for each tab -->
-				<div id="All" class="itemcontent">
-					<p> content here </p>
-					<p> content here </p>
-					<p> content here </p>
-				</div>
-				<div id="toPay" class="itemcontent">
-					<p> content here </p>
-					<p> content here </p>
-				</div>
-				<div id="toShip" class="itemcontent">
-					<p> content here </p>
-					<p> content here </p>
-					<p> content here </p>
-					<p> content here </p>
-				</div>
-				<div id="toRecv" class="itemcontent">
-					<p> content here </p>
-					<p> content here </p>
-					<p> content here </p>
+				<div id="Cart" class="itemcontent">
+					<!--table for products added to cart -->
+					<div>
+						<table class="cart"> <!--dito ata ung start ng php para malagyan ung table-->
+							<tr>
+								<th>Product Name</th>
+								<th>Product Details</th>
+								<th>Price</th>
+								<th>Quantity</th>
+								<th>Total</th>
+								<th>Action</th> <!--remove item ung actions-->
+							</tr>
+							<tr>
+								<td>name</td>
+								<td>details</td>
+								<td>P __.00</td>
+								<td> __ </td>
+								<td>P __.00</td>
+								<td> not yet </td>
+							</tr>
+							<tr>
+								<td>name</td>
+								<td>details</td>
+								<td>P __.00</td>
+								<td> __ </td>
+								<td>P __.00</td>
+								<td> not yet </td>
+							</tr>
+						</table>
+					</div>
+					<hr>
+					<div>
+						<button type="button" id="checkoutBtn" onclick="alert('Are you sure you want to checkout with these product?')">Check-out</button>
+					</div>
 				</div>
 				
+				<div id="Orders" class="itemcontent">
+					<div>
+						<table class="cart">
+							<tr>
+								<th>Product Name</th>
+								<th>Product Details</th>
+								<th>Price</th>
+								<th>Quantity</th>
+								<th>Total</th>
+								<th>Status</th>
+							</tr>
+							<tr>
+								<td>name</td>
+								<td>details</td>
+								<td>P __.00</td>
+								<td> __ </td>
+								<td>P __.00</td>
+								<td> not yet </td>
+							</tr>
+							<tr>
+								<td>name</td>
+								<td>details</td>
+								<td>P __.00</td>
+								<td> __ </td>
+								<td>P __.00</td>
+								<td> not yet </td> <!--remove item ung actions-->
+							</tr>
+						</table>
+					</div>
+					<hr>
+					<div>
+						<button type="button" id="clearBtn" onclick="alert('Are you sure you want to clear your purchase history?')">Clear History</button>
+					</div>
+				</div>
 			</div>
 			
 			<div id="Account" class="tabcontent">
