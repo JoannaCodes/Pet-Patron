@@ -1,0 +1,51 @@
+/* pet-profile-page */
+.pet-profile {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+/* ------ */
+
+.info {
+    display: flex;
+    justify-content: center;
+}
+
+.info .process,
+.info .about-me {
+    border-radius: 10px;
+    background-color: #FFFFFF;
+    border-top: 10px solid #FF7F50;
+    height: 100%;
+}
+
+/* ------ */
+
+.pet-story {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    border-top: 10px solid #FF7F50;
+    background-color: #FFFFFF;
+}
+
+/* ------ */
+
+.contact-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    background-color: #FFFFFF;
+}
+
+.contact-info .header {
+    background-color: #FF7F50;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    text-align: center;
+}
+
+/* pet-profile-page */

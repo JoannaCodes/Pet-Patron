@@ -111,7 +111,7 @@
                         <div class="col-md-6 ps-md-0 pe-md-2">
                             <div class="mb-3">
                                 <label for="pet_age" class="col-form-label">Age</label>
-                                <input type="number" class="form-control" name="pet_age">
+                                <input type="text" class="form-control" name="pet_age">
                             </div>
                         </div>
                         <div class="col-md-6 ps-md-2 pe-md-0">

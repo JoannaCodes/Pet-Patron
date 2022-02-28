@@ -39,18 +39,22 @@
                     <div class="row py-3">
                         <!-- Use loop here to display product form database note: max product is 3 -->
                         <div class="product-gallery col-md-3 px-2">
-                            <div class="card-box p-3 shadow">
-                                <img class="img-fluid mb-3" img src="uploads/products/cat_food.jfif" alt="cat-food">
-                                <div class="star">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
+                            <div class="card-box shadow mb-3 mh-100">
+                                <div class="card-thumbnail m-2">
+                                    <img class="img-fluid mb-3" img src="uploads/products/<?php echo $row['product_image'] ?>" alt="cat-food">
                                 </div>
-                                <h6 class="product-name">Cat Food</h6>
-                                <h5 class="product-price">Php 899.00</h5>
-                                <a href="" type="button" class="btn btn-product">Buy Now</a>
+                                <div class="card-body px-3 pb-1 mb-3">
+                                    <div class="star">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <h3><?php echo $row['product_name'] ?></h3>
+                                    <h6>Php <?php echo $row['product_price'] ?></h6>
+                                    <a href="pet-page.php?product-id=<?php echo $row['productId'] ?>" type="button" class="btn btn-info">Buy Now</a>
+                                </div>
                             </div>
                         </div>
                     </div>

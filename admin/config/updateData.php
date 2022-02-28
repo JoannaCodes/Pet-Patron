@@ -2,7 +2,7 @@
     //connection
     include_once ("connection.php");
 
-    if(isset($_POST['editAdmin']))
+    if(isset($_POST['edit_admin']))
     {   
         $admin_id = $_POST['admin_id'];
         
@@ -68,14 +68,6 @@
         $sterilization = $_POST['pet_sterilization'];
         $description = mysqli_real_escape_string($conn, $_POST['pet_description']);
 
-        // $info = $_POST['pet_info'];  
-        // $chkd="";  
-        // foreach($info as $chk)  
-        // {  
-        //     $chkd .= $chk.",";  
-        // }  
-        // $in_ch=mysqli_query($con,"insert into request_quote(technology) values ('$chkd')");
-
         $filename = basename($_FILES["pet_image"]["name"]);   
         //$folder = "./uploads/pets/".$filename;
         //$fileType = pathinfo($folder, PATHINFO_EXTENSION);
@@ -105,6 +97,34 @@
         // }
 
         //close connection
+        mysqli_close($conn);
+    }
+
+    if(isset($_POST['edit_product'])){
+        $product_id = $_POST['product_id'];
+
+        $name = $_POST['product_name'];
+        $description = mysqli_real_escape_string($conn, $_POST['product_description']);
+        $price = $_POST['product_price'];
+        $stock = $_POST['product_stocks'];
+
+        $filename = basename($_FILES["product_image"]["name"]); 
+
+        $query = "UPDATE tbl_products 
+        SET product_name='$name', product_description='$description', product_price='$price', product_stocks='$stock', 
+        product_image='$filename' WHERE productId='$product_id'";
+        
+        $query_run = mysqli_query($conn, $query);
+
+        if($query_run)
+        {
+            echo '<script> alert("Data Saved"); </script>';
+        }
+        else
+        {
+            echo '<script> alert("Data Not Saved"); </script>';
+        }
+
         mysqli_close($conn);
     }
 ?>

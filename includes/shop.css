@@ -1,0 +1,31 @@
+/* shop-page */
+.header{
+    text-align: center;
+}
+
+.product-gallery .card-pet {
+    text-decoration: none;
+    color: #000000;
+    transition: 0.3s;
+}
+
+.product-gallery .card-pet:hover {
+    color: #50D0FF;
+}
+
+.product-gallery .card-box {
+    border: 1px solid #DDDDDD;
+    border-radius: 10px;
+    background-color: #FFFFFF;
+}
+
+.product-gallery .card-box .card-thumbnail {
+    overflow: hidden;
+}
+
+.product-gallery .card-box .card-body {
+    text-decoration: none;
+    text-align: center;
+}
+
+/* shop-page */

@@ -1,10 +1,18 @@
+<?php
+    include "../admin/config/connection.php";
+
+    $sql = "SELECT * FROM tbl_products";
+    $products = mysqli_query($conn, $sql);
+    $rowcount = mysqli_num_rows($products)
+?>
 <div class="container p-5">
     <div class="row p-3 shadow" id="table">
         <div class="d-grid gap-2 d-md-block">
             <button class="btn btn-success" type="button" id="addBtn">Create +</button>
+            <button class="btn btn-info" type="button" id="refreshBtn">Manually Refresh Table</button>
         </div>
         <div class="mt-3 overflow-auto">
-            <table class="table table-responsive" id="itemTable">
+            <table class="table table-responsive" id="productTable">
             <thead>
                 <tr>
                     <th scope="col">Product Id</th>
@@ -18,12 +26,7 @@
             </thead>
             <tbody>
                 <?php
-                    include "../admin/config/connection.php";
-
-                    $sql = "SELECT * FROM tbl_products";
-                    $product = mysqli_query($conn, $sql);
-
-                    foreach($product as $row){
+                    foreach($products as $row){
                         ?>
                             <tr>
                                 <td><?php echo $row['productId']; ?></td>
@@ -39,19 +42,26 @@
                             </tr>
                         <?php
                     }
-
-                    mysqli_close($conn);
                 ?>
             </tbody>
         </table>
-        </div>
     </div>
-    
-    <p class="mt-3"><strong>Total: 0</strong></p>
-    <iframe name="content"></iframe>
+</div>
+<p class="mt-3">Manually Refresh Table when change is made</p>
+<p class="mt-3"><strong>Total: <?php echo $rowcount; ?></strong></p>
+<iframe name="content"></iframe>
+<?php mysqli_close($conn); ?>
+
     <!-- Modals -->
     <?php include '../admin/modals/inventoryModals.php'; ?>
     <!-- Modal -->
+
+    <script>
+        //Table Refresh Manual
+        $("#refreshBtn").click(function(){
+            $('#content').load('../admin/inventory.php');
+        });
+    </script>
 
     <!-- Add Row -->
     <script>
@@ -74,7 +84,7 @@
     <script>
         $(document).ready(function(){
             //Edit Row
-            $("#itemTable #editItemBtn").click(function(){
+            $("#productTable #editItemBtn").click(function(){
                 $("#editItemModal").show();
 
                 $tr = $(this).closest('tr');
@@ -88,7 +98,6 @@
                 
                 $('#product_id').val(data[0]);
                 $('#product_name').val(data[1]);
-                $('#product_image').val(data[2]);
                 $('#product_description').val(data[3]);
                 $('#product_price').val(data[4]);
                 $('#product_stocks').val(data[5]);
@@ -107,7 +116,7 @@
     <!-- Delete Row -->
     <script>
         $(document).ready(function(){
-            $("#itemTable #deleteBtn").click(function(){
+            $("#productTable #deleteBtn").click(function(){
                 $("#deleteModal").show();
 
                 $tr = $(this).closest('tr');
@@ -126,33 +135,6 @@
             });
 
             $("#deleteModal #deleteBtn").click(function(){
-                $("#deleteModal").hide();
-            });
-        });
-    </script>
-    <script>
-        $(document).ready(function(){
-            $("#addBtn").click(function(){
-                $("#addItemModal").show();
-            });
-
-            $("#addItemModal #closeBtn").click(function(){
-                $("#addItemModal").hide();
-            });
-
-            $("#itemTable #editBtn").click(function(){
-                $("#editItemModal").show();
-            });
-
-            $("#editItemModal #closeBtn").click(function(){
-                $("#editItemModal").hide();
-            });
-
-            $("#itemTable #deleteBtn").click(function(){
-                $("#deleteModal").show();
-            });
-
-            $("#deleteModal #closeBtn").click(function(){
                 $("#deleteModal").hide();
             });
         });

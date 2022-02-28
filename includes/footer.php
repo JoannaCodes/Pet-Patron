@@ -14,19 +14,19 @@
       
             <ul class="quick-links list-unstyled mb-0">
               <li>
-                <a href="/pages/home/home-page.html">Home</a>
+                <a href="home.php">Home</a>
               </li>
               <li>
-                <a href="/pages/adoption/adoption-page.html">Adopt A Pet</a>
+                <a href="adopt.php">Adopt A Pet</a>
               </li>
               <li>
-                <a href="/pages/shop/shop-page.html">Shop</a>
+                <a href="shop.php">Shop</a>
               </li>
               <li>
-                <a href="/pages/home/home-page.html#about">About</a>
+                <a href="home.php#about">About</a>
               </li>
               <li>
-                <a href="/pages/home/home-page.html#contact">Contact Us</a>
+                <a href="home.php#about">Contact Us</a>
               </li>
             </ul>
           </div>
@@ -37,33 +37,22 @@
             <ul class="dev-links list-unstyled">
               <li>
                 <!-- Email -->
-                <a href="#1" class="">Joanna Marie B. Lara</a>
+                <a href="mailto: joannamarieb.lara@gmail.com" class="">Joanna Marie B. Lara</a>
                 <br>
                 <!-- Social Media -->
-                <a class="btn btn-floating m-1" href="#!" role="button">
-                  <i class="fab fa-facebook-f"></i>
                 </a>
-                <a class="btn btn-floating m-1" href="#!" role="button">
-                  <i class="fab fa-twitter"></i>
-                </a>
-                <a class="btn btn-floating m-1" href="#!" role="button">
+                <a class="btn btn-floating m-1" href="https://www.linkedin.com/in/joanna-lara/" role="button">
                   <i class="fab fa-linkedin-in"></i>
                 </a>
-                <a class="btn btn-floating m-1" href="#!" role="button">
+                <a class="btn btn-floating m-1" href="https://github.com/JoannaCodes" role="button">
                   <i class="fab fa-github"></i>
                 </a>
               </li>
               <li>
                 <!-- Email -->
-                <a href="#!">Queennie Marie S. Llido</a>
+                <a href="mailto: ">Queennie Marie S. Llido</a>
                 <br>
                 <!-- Social Media -->
-                <a class="btn btn-floating m-1" href="#!" role="button">
-                  <i class="fab fa-facebook-f"></i>
-                </a>
-                <a class="btn btn-floating m-1" href="#!" role="button">
-                  <i class="fab fa-twitter"></i>
-                </a>
                 <a class="btn btn-floating m-1" href="#!" role="button">
                   <i class="fab fa-linkedin-in"></i>
                 </a>

@@ -61,4 +61,24 @@
         //close connection
         mysqli_close($conn);
     }
+
+    if(isset($_POST['delete_product']))
+    {   
+        $product_id = $_POST['delete_id'];
+
+        $query ="DELETE FROM tbl_products WHERE productId='$product_id'";
+        $query_run = mysqli_query($conn, $query);
+
+        if($query_run)
+        {
+            echo '<script> alert("Data Deleted"); </script>';
+        }
+        else
+        {
+            echo '<script> alert("Data Not Deleted"); </script>';
+        }
+
+        //close connection
+        mysqli_close($conn);
+    }
 ?>
