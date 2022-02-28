@@ -50,13 +50,13 @@
               </li>
               <li>
                 <!-- Email -->
-                <a href="mailto: ">Queennie Marie S. Llido</a>
+                <a href="mailto: llidomariequeennie@gmail.com ">Queennie Marie S. Llido</a>
                 <br>
                 <!-- Social Media -->
                 <a class="btn btn-floating m-1" href="#!" role="button">
                   <i class="fab fa-linkedin-in"></i>
                 </a>
-                <a class="btn btn-floating m-1" href="#!" role="button">
+                <a class="btn btn-floating m-1" href="https://github.com/qmsllido" role="button">
                   <i class="fab fa-github"></i>
                 </a>
                 <!-- Social Media -->

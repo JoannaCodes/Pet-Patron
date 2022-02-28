@@ -2,6 +2,7 @@
 
     <link rel="stylesheet" href="includes/styles.css">
     <script src="includes/home-page.js"></script>
+    <link rel="stylesheet" href="includes/home.css">
     <?php include 'includes/navbar.php'; ?>
 
     <div class="container-fluid">

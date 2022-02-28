@@ -17,6 +17,7 @@
     border: 1px solid #DDDDDD;
     border-radius: 10px;
     background-color: #FFFFFF;
+    height: 100%;
 }
 
 .product-gallery .card-box .card-thumbnail {

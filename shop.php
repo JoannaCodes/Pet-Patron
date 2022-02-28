@@ -9,13 +9,13 @@
             <div class="gallery row mt-5 mb-5 mx-0" id="shop">
                 <!--Shopping Section-->
                 <div class="header">
-                    <h1>Shop</h1>
+                    <h2>Shop</h2>
                     <hr>
                     <h3>You can check some of our pet products with affordable price.</h3>
                 </div>
                 
                 <div class="product-gallery col-md-12 pe-lg-5 mt-5">
-                    <div class="row row-cols-2 row-cols-md-3 mb-5 g-4">
+                    <div class="row row-cols-2 row-cols-md-4 mb-5 g-4">
                         <?php
                             include "admin/config/connection.php";
 
@@ -37,7 +37,7 @@
                                                     <i class="fas fa-star"></i>
                                                     <i class="fas fa-star"></i>
                                                 </div>
-                                                <h3><?php echo $row['product_name'] ?></h3>
+                                                <h4><?php echo $row['product_name'] ?></h4>
                                                 <h6>Php <?php echo $row['product_price'] ?></h6>
                                                 <a href="pet-page.php?product-id=<?php echo $row['productId'] ?>" type="button" class="btn btn-info">Buy Now</a>
                                             </div>
