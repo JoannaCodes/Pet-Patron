@@ -67,9 +67,9 @@ body {
 /*------ Body --------*/
 
 /*---styling the tab---*/
-.body {
+.user_body {
 	background-color: #FFFFFF;
-	min-height: 100vh;
+	min-height: fit-content;
 	width: 100%;
 	padding: 25px 15px;
 }
@@ -186,6 +186,37 @@ input[type=submit]:hover {
 	border-left: 4px solid #FFFFFF;
 	width: 80%;
 	min-height: 80vh;
+}
+/*Cart tab*/
+.cartTable {
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 10px;
+}
+th {
+	text-align: left;
+	padding:16px;
+	background-color:coral;
+	border-radius:10px;
+}
+td {
+	text-align: left;
+	padding:14px;
+	border-left: 2px;
+	border-right: 2px;
+}
+#checkoutBtn, #clearBtn {
+	background-color: coral;
+	text-align: center;
+	padding: 10px 10px;
+	text-decoration: none;
+	font-size: 16px;
+	margin: 10px 10px;
+	cursor: pointer;
+	align-items: right;
+}
+#checkoutBtn:hover, #clearBtn:hover {
+	background-color: #50D0FF;
 }
 
 /*------ Footer from pet profile ------*/ 
