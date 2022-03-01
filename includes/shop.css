@@ -1,5 +1,5 @@
 /* shop-page */
-.header{
+.header {
     text-align: center;
 }
 
@@ -29,4 +29,16 @@
     text-align: center;
 }
 
+.btn-custom {
+    background-color: #FF7F50;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+
 /* shop-page */
+
+/* IE 11 */
+select::-ms-expand {
+    border: none;
+    display: none;
+}

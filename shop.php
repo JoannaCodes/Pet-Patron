@@ -9,7 +9,7 @@
             <div class="gallery row mt-5 mb-5 mx-0" id="shop">
                 <!--Shopping Section-->
                 <div class="header">
-                    <h2>Shop</h2>
+                    <h1>Shop</h1>
                     <hr>
                     <h3>You can check some of our pet products with affordable price.</h3>
                 </div>
@@ -39,7 +39,7 @@
                                                 </div>
                                                 <h4><?php echo $row['product_name'] ?></h4>
                                                 <h6>Php <?php echo $row['product_price'] ?></h6>
-                                                <a href="pet-page.php?product-id=<?php echo $row['productId'] ?>" type="button" class="btn btn-info">Buy Now</a>
+                                                <a href="product.php?product-id=<?php echo $row['productId'] ?>" type="button" class="btn btn-custom">Buy Now</a>
                                             </div>
                                         </div>
                                     </div>
