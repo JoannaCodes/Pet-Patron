@@ -2,7 +2,7 @@
 
     <link rel="stylesheet" href="includes/styles.css">
     <link rel="stylesheet" href="includes/adopt.css">
-    <script src="includes/adoption-page.js"></script>
+    <script src="includes/script.js"></script>
     <div id="fb-root"></div>
     <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v13.0" nonce="YLDgq7iH"></script>
     <?php include 'includes/navbar.php'; ?>
@@ -24,12 +24,11 @@
             </div>
             
             <div class="indicators mt-2">
-            <span class="dot" onclick="currentSlide(1)"></span>
-            <span class="dot" onclick="currentSlide(2)"></span>
-            <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
             </div>
-
-            <script> showSlides(); </script>
+            <script>carousel();</script>
         </div>
 
         <!-- Pet Gallery -->

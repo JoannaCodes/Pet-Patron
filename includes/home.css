@@ -19,15 +19,32 @@
     text-align: center;
 }
 
-.btn-adopt {
+.btn-custom {
     background-color: #FF7F50;
-    border-radius: 20px;
+    border-radius: 10px;
     transition: 0.5s;
+    color: #FFFFFF;
 }
 
-.btn-adopt:hover {
-    background-color: #50D0FF;
+.btn-custom:hover {
+    animation: pulse 1s infinite;
+    transition: .3s;
 }
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    70% {
+        transform: scale(.9);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
 
 /* ------ */
 .product {
@@ -36,22 +53,19 @@
     align-items: center;
 }
 
-.btn-product {
-    background-color: #FF7F50;
-    border-radius: 20px;
-    transition: 0.5s;
-}
-
-.btn-product:hover {
-    background-color: #50D0FF;
+.product-group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .product-group>.row {
     overflow-x: auto;
     flex-wrap: nowrap;
+    width: 90%;
 }
 
-.product-group>.row>.col-md-4 {
+.product-group>.row>.product-gallery {
     display: inline-block;
     float: none;
 }
@@ -65,6 +79,11 @@
     background-color: #FFFFFF;
 }
 
+.card-box {
+    height: 100%;
+    border-left: 10px solid #FF7F50;
+}
+
 /* ------ */
 .about {
     display: flex;
@@ -73,23 +92,50 @@
     border-radius: 50px;
 }
 
-.info-col {
-    background-color: #FFFFFF;
-    background-image: url('/assets/images/background/bg2-2.png');
-    background-size: cover;
-    border-radius: 10px;
-}
-
 .contact {
     display: flex;
     justify-content: center;
-    align-items: center;
 }
 
-.contact-form {
-    background-color: #FFFFFF;
-    border-radius: 10px;
-    width: 50%;
+.contact>.col-md-3 {
+    background: #50D0FF;
+    padding: 4%;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+}
+
+.contact-info {
+    margin-top: 10%;
+}
+
+.contact-info img {
+    margin-bottom: 15%;
+}
+
+.contact-info h2 {
+    margin-bottom: 10%;
+}
+
+.contact>.col-md-9 {
+    background: #FFFFFF;
+    padding: 3%;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
+
+.contact-form label {
+    font-weight: 600;
+}
+
+.contact-form button {
+    background: #FF7F50;
+    color: #FFFFFF;
+    font-weight: 600;
+    width: 25%;
+}
+
+.contact-form button:focus {
+    box-shadow: none;
 }
 
 /* home-page */

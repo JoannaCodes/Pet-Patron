@@ -1,0 +1,28 @@
+.container-fluid {
+    background-image: url('../Images/Background/bg-2.png');
+    background-size: contain;
+}
+
+.forms {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    background-image: url('../Images/Background/bg-2.png');
+    background-size: contain;
+}
+
+.forms h2,
+.forms p {
+    text-align: center;
+}
+
+.btn-outline-custom {
+    color: #212529;
+    background-color: transparent;
+    border-color: #212529;
+}
+
+.btn-outline-custom:hover {
+    border-color: #50D0FF;
+    background-color: #50D0FF;
+}
