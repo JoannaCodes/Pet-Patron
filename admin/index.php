@@ -28,7 +28,7 @@
                     <i class="fas fa-tachometer-alt me-2"></i>Dashboard
                 </a>
                 <a  class="list-group-item list-group-item-action" id="pets">
-                    <i class="fas fa-paw-alt me-2"></i>Pets for Adoption
+                    <i class="fas fa-paw me-2"></i>Pets for Adoption
                 </a>
                 <a  class="list-group-item list-group-item-action" id="org">
                     <i class="fas fa-users me-2"></i>Rescue Organization
@@ -37,7 +37,7 @@
                     <i class="fas fa-shopping-bag me-2"></i>Orders
                 </a>
                 <a  class="list-group-item list-group-item-action" id="inventory">
-                    <i class="fas fa-inventory me-2"></i>Inventory
+                    <i class="fa-solid fa-boxes-stacked me-2"></i>Inventory
                 </a>
             </div>
             <hr>

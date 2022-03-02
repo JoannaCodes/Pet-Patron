@@ -1,3 +1,21 @@
+<?php 
+    include "admin/config/connection.php";
+
+    $pet_id = $_GET['pet-id'];
+
+    $sql = "SELECT petId, pet_name,	pet_age, pet_gender, pet_size, pet_weight, pet_sterilization, pet_description, pet_image,
+    org_name, org_address, org_description, org_contact, org_email, org_process FROM tbl_pets 
+    INNER JOIN tbl_rescueorg ON tbl_pets.rescueOrgId = tbl_rescueorg.rescueOrgId
+    WHERE petId = $pet_id";
+
+    $pet = mysqli_query($conn, $sql);
+
+    $pet_profile = mysqli_fetch_assoc($pet);
+
+    $processes = explode(", ", $pet_profile['org_process']);
+
+    mysqli_close($conn);
+?>
 <?php include 'includes/header.php'; ?>
 
     <link rel="stylesheet" href="includes/styles.css">
@@ -5,24 +23,6 @@
     <?php include 'includes/navbar.php'; ?>
     <div class="container px-4">
         <!-- Profile -->
-        <?php 
-            include "admin/config/connection.php";
-
-            $pet_id = $_GET['pet-id'];
-
-            $sql = "SELECT petId, pet_name,	pet_age, pet_gender, pet_size, pet_weight, pet_sterilization, pet_description, pet_image,
-            org_name, org_address, org_description, org_contact, org_email, org_process FROM tbl_pets 
-            INNER JOIN tbl_rescueorg ON tbl_pets.rescueOrgId = tbl_rescueorg.rescueOrgId
-            WHERE petId = $pet_id";
-
-            $pet = mysqli_query($conn, $sql);
-
-            $pet_profile = mysqli_fetch_assoc($pet);
-
-            $processes = explode(", ", $pet_profile['org_process']);
-
-            mysqli_close($conn);
-        ?>
         <div class="pet-profile row mt-5">
             <div class="col-md-4">
                 <div>

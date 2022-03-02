@@ -3,7 +3,7 @@
     text-align: center;
 }
 
-.product-gallery .card-pet {
+.product-gallery .card-product {
     text-decoration: none;
     color: #000000;
     transition: 0.3s;
@@ -36,6 +36,20 @@
 }
 
 /* shop-page */
+
+/* product-page */
+.product-profile {
+    display: flex;
+    justify-content: center;
+}
+
+.rel-product {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+/* product-page */
 
 /* IE 11 */
 select::-ms-expand {

@@ -1,31 +1,29 @@
 .user {
     display: flex;
-    border-radius: 20px;
     overflow: hidden;
 }
 
 .tab {
-    background-color: #FF7F50;
+    /* background-color: #FF7F50; */
     width: 30%;
     height: 100%;
 }
 
 .tab button {
+    background-color: transparent;
     display: block;
-    background-color: #FF7F50;
+    /* background-color: #FF7F50; */
     color: black;
-    padding: 22px 16px;
     width: 100%;
     border: none;
     outline: none;
     text-align: left;
     cursor: pointer;
     transition: 0.3s;
-    font-size: 17px;
 }
 
 .tab button:hover {
-    background-color: #FF5A1D;
+    background-color: #FF7F50;
 }
 
 .tab button.active {
@@ -33,56 +31,23 @@
 }
 
 .tabcontent {
-    padding: 0px 12px;
+    border-left: 1px solid #FF7F50;
     width: 70%;
-    border-left: none;
     height: 100%;
 }
 
 /* Purchase Tab Content */
-.tab2 {
-    overflow: hidden;
-    border: 1px solid #FF7F50;
-    background-color: #FF7F50;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-}
-
-.tab2 button {
-    background-color: inherit;
-    float: left;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    padding: 14px 16px;
-    transition: 0.3s;
-    font-size: 17px;
-}
-
-.tab2 button:hover {
-    background-color: #FF5A1D;
-}
-
-.tab2 button.active {
-    background-color: #FF5A1D;
-}
-
-.tabcontent2 {
-    display: none;
+.tab-content {
     background-color: #FFFFFF;
-    padding: 6px 12px;
     border: 1px solid #CCCCCC;
     border-top: none;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
+}
+
+.nav-link {
+    color: #212529;
 }
 
 .btn-custom {
     background-color: #FF7F50;
     border-radius: 10px;
-}
-
-/* IE */
-select::-ms-expand {
-    display: none;
 }

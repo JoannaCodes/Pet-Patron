@@ -24,24 +24,25 @@
                             
                             foreach($product as $row){
                                 ?>
-                                    <div class="col pe-md-3">
-                                        <div class="card-box shadow mb-3 mh-100">
-                                            <div class="card-thumbnail m-2">
-                                                <img class="img-fluid mb-3" img src="uploads/products/<?php echo $row['product_image'] ?>" alt="cat-food">
-                                            </div>
-                                            <div class="card-body px-3 pb-1 mb-3">
-                                                <div class="star">
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
+                                    <div class="col-md-3">
+                                        <a class="card-product" href="product.php?product-id=<?php echo $row['productId'] ?>">
+                                            <div class="card-box shadow">
+                                                <div class="card-thumbnail m-2">
+                                                    <img class="img-fluid mb-3" img src="uploads/products/<?php echo $row['product_image'] ?>" alt="cat-food">
                                                 </div>
-                                                <h4><?php echo $row['product_name'] ?></h4>
-                                                <h6>Php <?php echo $row['product_price'] ?></h6>
-                                                <a href="product.php?product-id=<?php echo $row['productId'] ?>" type="button" class="btn btn-custom">Buy Now</a>
+                                                <div class="card-body px-3 pb-1 mb-3">
+                                                    <div class="star">
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                    </div>
+                                                    <h4><?php echo $row['product_name'] ?></h4>
+                                                    <h6>Php <?php echo $row['product_price'] ?>.00</h6>
+                                                </div>
                                             </div>
-                                        </div>
+                                        </a>
                                     </div>
                                 <?php
                             }

@@ -11,14 +11,14 @@
                         <label for="org-name" class="col-form-label">Name</label>
                         <input type="text" class="form-control" name="org_name">
                     </div>
-                    <div class="row mx-md-auto">
-                        <div class="col-md-6 ps-md-0 pe-md-2">
+                    <div class="row">
+                        <div class="col-md-6">
                             <div class="mb-3">
                                 <label for="org-contact" class="col-form-label">Contact No.</label>
                                 <input type="phone" class="form-control" name="org_contact">
                             </div>
                         </div>
-                        <div class="col-md-6 ps-md-2 pe-md-0">
+                        <div class="col-md-6">
                             <div class="mb-3">
                                 <label for="org-email" class="col-form-label">Email Address</label>
                                 <input type="email" class="form-control" name="org_email">
@@ -59,14 +59,14 @@
                             <label for="org-name" class="col-form-label">Name</label>
                             <input type="text" class="form-control" name="org_name" id="org_name">
                         </div>
-                        <div class="row mx-md-auto">
-                            <div class="col-md-6 ps-md-0 pe-md-2">
+                        <div class="row">
+                            <div class="col-md-6">
                                 <div class="mb-3">
                                     <label for="org-contact" class="col-form-label">Contact No.</label>
                                     <input type="phone" class="form-control" name="org_contact" id="org_contact">
                                 </div>
                             </div>
-                            <div class="col-md-6 ps-md-2 pe-md-0">
+                            <div class="col-md-6">
                                 <div class="mb-3">
                                     <label for="org-email" class="col-form-label">Email Address</label>
                                     <input type="email" class="form-control" name="org_email" id="org_email">
@@ -107,14 +107,14 @@
                         <label for="pet_name" class="col-form-label">Name</label>
                         <input type="text" class="form-control" name="pet_name">
                     </div>
-                    <div class="row mx-md-auto">
-                        <div class="col-md-6 ps-md-0 pe-md-2">
+                    <div class="row">
+                        <div class="col-md-6">
                             <div class="mb-3">
                                 <label for="pet_age" class="col-form-label">Age</label>
                                 <input type="text" class="form-control" name="pet_age">
                             </div>
                         </div>
-                        <div class="col-md-6 ps-md-2 pe-md-0">
+                        <div class="col-md-6">
                             <div class="mb-3">
                                 <label class="col-form-label">Gender</label>
                                 <select class="form-select" name="pet_gender">
@@ -124,8 +124,8 @@
                             </div>
                         </div>
                     </div>
-                    <div class="row mx-md-auto">
-                        <div class="col-md-3 ps-md-0 pe-md-2">
+                    <div class="row">
+                        <div class="col-md-3">
                             <div class="mb-3">
                                 <label class="col-form-label">Size</label>
                                 <select class="form-select" name="pet_size">
@@ -145,13 +145,13 @@
                                 </select>
                             </div>
                         </div>
-                        <div class="col-md-3 ps-md-0 pe-md-0">
+                        <div class="col-md-3">
                             <div class="mb-3">
-                                <label for="pet_weight" class="col-form-label">Weight <small>(pounds)</small></label>
-                                <input type="number" class="form-control" name="pet_weight">
+                                <label for="pet_weight" class="col-form-label">Weight</label>
+                                <input type="number" class="form-control" name="pet_weight" placeholder="lbs (pounds)">
                             </div>
                         </div>
-                        <div class="col-md-6 ps-md-2 pe-md-0">
+                        <div class="col-md-6">
                             <div class="mb-3">
                                 <label class="col-form-label">Sterilization</label>
                                 <select class="form-select" name="pet_sterilization">
@@ -162,7 +162,7 @@
                         </div>
                     </div>
                     <div class="mb-3">
-                        <label for="pet_image" class="form-label">Pet Image</label>
+                        <label for="pet_image" class="col-form-label">Pet Image</label>
                         <input class="form-control" type="file" name="pet_image">
                     </div>
                     <div class="mb-3">

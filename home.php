@@ -27,7 +27,7 @@
             <div class="mt-3 p-3">
                 <h1>Looking for a cute lovable companion?</h1>
                 <p>Welcome to Pet Patron! We are helping some organizaton to look for furever homes for their rescued animals. You can check our adoption page for more information! </p>
-                <a href="adopt.php" type="button" class="btn btn-lg btn-custom">Find Out 
+                <a href="adopt.php" type="button" class="btn btn-lg btn-outline-custom">Find Out 
                     more <i class="fas fa-arrow-right"></i>
                 </a>
             </div>
@@ -46,21 +46,10 @@
                         
                         foreach($product as $row){
                             ?>
-                            <div class="product-gallery col-md-3 px-2">
+                            <div class="product-gallery col-md-3">
                                 <div class="card-box shadow mb-3 p-3">
                                     <div class="card-thumbnail m-2">
-                                        <img class="img-fluid mb-3" img src="uploads/products/<?php echo $row['product_image'] ?>" alt="cat-food">
-                                    </div>
-                                    <div class="card-body px-3 pb-1 mb-3">
-                                        <div class="star">
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                        </div>
-                                        <h3><?php echo $row['product_name'] ?></h3>
-                                        <h6>Php <?php echo $row['product_price'] ?></h6>
+                                        <img class="img-fluid" img src="uploads/products/<?php echo $row['product_image'] ?>" alt="<?php echo $row['product_name'] ?>">
                                     </div>
                                 </div>
                             </div>
@@ -70,8 +59,9 @@
                         mysqli_close($conn);
                     ?>
                 </div>
+                <a href="shop.php" type="button" class="btn btn-lg btn-outline-custom">Go to Shop <i class="fas fa-arrow-right"></i>
+                </a>
             </div>
-            <a href="shop.php" type="button" class="text-center btn btn-lg btn-custom">Go to Shop <i class="fas fa-arrow-right"></i></a>
         </div>
 
         <div class="about row mt-5 mx-5 p-5 p-md-5" id="about">
@@ -86,7 +76,7 @@
 
         <div class="contact row mt-5 px-5" id="contact">
             <div class="col-md-3 shadow">
-                <div class="contact-info">
+                <div class="contact-info p-4">
                     <img src="https://image.ibb.co/kUASdV/contact-image.png" alt="image"/>
                     <h2>Contact Us</h2>
                     <h4>We would love to hear from you !</h4>
@@ -97,8 +87,8 @@
                 </div>
             </div>
             <div class="col-md-9 shadow">
-                <div class="contact-form">
-                    <form action="" method="">
+                <div class="contact-form p-5">
+                    <form action="admin/config/insertData.php" method="post">
                         <div class="mb-3 form-group">
                             <label for="name" class="col-form-label">Username</label>
                             <input type="text" class="form-control" name="name">
@@ -111,7 +101,7 @@
                             <label for="message" class="col-form-label">Message</label>
                             <textarea class="form-control" name="pet_description" name="message"></textarea>
                         </div>
-                        <button type="submit" class="btn btn-success" name="add_admin" id="add_admin">Send</button>
+                        <button type="submit" class="btn btn-outline-custom" name="add_admin" id="add_admin">Send</button>
                         </div>
                     </form>
                 </div>

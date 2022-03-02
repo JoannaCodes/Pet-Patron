@@ -22,32 +22,6 @@
               <li class="nav-item">
                 <a class="nav-link" href="shop.php">Shop</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link me-3" href="user.php#cart">
-                  <i class="fas fa-shopping-cart"></i> Cart
-                </a>
-              </li>
-    
-              <li class="nav-item">
-                <a class="nav-link" href="user-login.php">
-                  <i class="fas fa-user"></i> Login/Signup
-                </a>
-              </li>
-    
-              <!-- When user has logged In -->
-              <!-- <li class="nav-item dropdown">
-                      <a class="nav-link dropdown-toggle" href="#" id="user-log" role="button" data-bs-toggle="dropdown"
-                          aria-expanded="false">
-                          <i class="fas fa-user"></i>
-                      </a>
-                      <ul class="dropdown-menu" aria-labelledby="user-log">
-                          <li><a class="dropdown-item" href="/pages/login/user-page.html">Profile</a></li>
-                          <li>
-                              <hr class="dropdown-divider">
-                          </li>
-                          <li><a class="dropdown-item" href="#">Logout</a></li>
-                      </ul>
-                  </li> -->
             </ul>
           </div>
         </div>

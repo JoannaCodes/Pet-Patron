@@ -15,17 +15,18 @@
 
     <link rel="stylesheet" href="includes/styles.css">
     <link rel="stylesheet" href="includes/shop.css">
-    
+
     <?php include 'includes/navbar.php'; ?>
-	<div class="container sproduct my-2 pt-5">
-		<div class="row mt-5">
-			<div class="col-lg-5 col-md-12 col-12">
-				<img class="img-fluid w-100" src="uploads/products/<?php echo $product_info['product_image'] ?>" alt="">
+
+	<div class="container px-4">
+		<div class="product-profile row mt-5">
+			<div class="col-md-4">
+				<img class="img-fluid shadow" src="uploads/products/<?php echo $product_info['product_image'] ?>" alt="">
 			</div>
-			<div class="col-lg-6 col-md-12 col-12">
+			<div class="col-md-8">
 				<h6>Home / Shop </h6>
 				<h2 class="py-4"><?php echo $product_info['product_name'] ?></h2>
-				<h3>Php <?php echo $product_info['product_price'] ?></h3>
+				<h3>Php <?php echo $product_info['product_price'] ?>.00</h3>
 				<select class="form-select my-3 w-50">
 					<option>Select quantity</option>
 					<option>1</option>
@@ -47,16 +48,16 @@
 				<button class="btn btn-custom">Add to Cart</button>
 			</div>
 		</div>
-		<div class="row mt-5">
+		<div class="rel-products row mt-5">
 			<h3>Related Products</h3>
 			<hr class="mx-auto">
-			<div class="product-gallery col-md-12 pe-lg-5 mt-5">
-                    <div class="row row-cols-2 row-cols-md-4 mb-5 g-4">
+			<div class="product-gallery col-md-12">
+                    <div class="row row-cols-2 row-cols-md-3 mb-5 g-4">
                         <?php
                             foreach($product as $row){
                                 ?>
-                                    <div class="col pe-md-3">
-                                        <div class="card-box shadow mb-3 mh-100">
+                                    <div class="col-md-3">
+                                        <div class="card-box shadow">
                                             <div class="card-thumbnail m-2">
                                                 <img class="img-fluid mb-3" img src="uploads/products/<?php echo $row['product_image'] ?>" alt="cat-food">
                                             </div>
@@ -70,7 +71,7 @@
                                                 </div>
                                                 <h4><?php echo $row['product_name'] ?></h4>
                                                 <h6>Php <?php echo $row['product_price'] ?></h6>
-                                                <a href="pet-page.php?product-id=<?php echo $row['productId'] ?>" type="button" class="btn btn-info">Buy Now</a>
+                                                <a href="pet-page.php?product-id=<?php echo $row['productId'] ?>" type="button" class="btn btn-custom">Buy Now</a>
                                             </div>
                                         </div>
                                     </div>
