@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 23, 2022 at 03:13 PM
+-- Generation Time: Mar 02, 2022 at 12:40 PM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 8.0.13
 
@@ -80,10 +80,10 @@ CREATE TABLE `tbl_pets` (
   `petId` int(11) NOT NULL,
   `rescueOrgId` int(11) NOT NULL,
   `pet_name` varchar(255) NOT NULL,
-  `pet_age` int(11) NOT NULL,
+  `pet_age` varchar(255) NOT NULL,
   `pet_gender` varchar(255) NOT NULL,
   `pet_size` varchar(255) NOT NULL,
-  `pet_weight` int(11) NOT NULL,
+  `pet_weight` decimal(11,0) NOT NULL,
   `pet_sterilization` varchar(255) NOT NULL,
   `pet_description` text NOT NULL,
   `pet_image` varchar(100) NOT NULL,
@@ -113,7 +113,16 @@ CREATE TABLE `tbl_products` (
 --
 
 INSERT INTO `tbl_products` (`productId`, `product_name`, `product_image`, `product_description`, `product_price`, `product_stocks`, `createdAt`, `updatedAt`) VALUES
-(100, 'Cat Food', '', 'sample', 100, 1, '2022-02-23 22:05:33', '2022-02-23 14:05:33');
+(100, 'Cat Food', 'cat_food.jpg', 'Nutritious and dry food for cats. \r\n\r\n[NOTE: Royal Canin is the available in stock.]', 899, 10, '2022-02-28 17:32:50', '2022-02-28 09:32:50'),
+(103, 'Dog Bath Set', 'dog.jpg', 'The Dog Shampoo and Conditioner set made with natural ingredients. Removes ticks, fleas and mites. Safe for regular use.', 280, 10, '2022-02-28 17:35:00', '2022-02-28 09:35:00'),
+(105, 'Feather Cat Toy', 'cats_toy1.jpg', 'Feather toy for your furry friend to play.', 120, 40, '2022-02-28 17:39:01', '2022-02-28 09:39:01'),
+(106, 'Dog Chew Toy', 'dogs_toy.jpg', 'Chew toys for dogs can help stimulation and relief from boredom.', 120, 50, '2022-02-28 18:02:18', '2022-02-28 10:02:18'),
+(107, 'Dog Chew Stuffed Toy', 'dogs_toy1.jpeg', 'Other dog chew toys with assorted design with affordable price.', 80, 50, '2022-02-28 18:09:48', '2022-02-28 10:09:48'),
+(108, 'Pet Clothes', 'pet_clothes.jpeg', 'Dress up your furry friend with cute and lovely clothes.\r\n\r\n[NOTE: Small sizes are only available in stock.]', 150, 50, '2022-02-28 18:12:23', '2022-02-28 10:12:23'),
+(109, 'Pet Collar', 'pet_collar.jpg', 'Collar can be used for identification, fashion, or protection. Identification tags and medical information are often placed on dog and cat collars!\r\n', 75, 100, '2022-02-28 18:15:24', '2022-02-28 10:15:24'),
+(110, 'Cat Bath Set', 'cat_bath.jpg', 'The Cat Shampoo and Conditioner set made with natural ingredients. Removes ticks, fleas and mites. Safe for regular use. [INGREDIENTS: Organic Shampoo Base, Neem Oil Extract, Rosemary Oil Extract, Oatmeal Oil Extract, and fragrance.]', 250, 10, '2022-02-28 18:19:25', '2022-02-28 10:30:11'),
+(111, 'Dog Food', 'dogfood.jpg', 'Nutritious and dry food for dogs.\r\n\r\n[NOTE: Royal Canin is the available in stock.]', 999, 10, '2022-02-28 18:31:43', '2022-02-28 10:32:37'),
+(112, 'Mouse Cat Toy', 'cats_mouse_toy.jpg', 'Assorted and different cute designs of stuffed toys with catnip for your furry friend to play.', 60, 50, '2022-02-28 18:33:42', '2022-02-28 10:34:33');
 
 -- --------------------------------------------------------
 
@@ -126,7 +135,7 @@ CREATE TABLE `tbl_rescueorg` (
   `org_name` varchar(255) NOT NULL,
   `org_address` varchar(255) NOT NULL,
   `org_description` text NOT NULL,
-  `org_contact` int(11) NOT NULL,
+  `org_contact` varchar(11) NOT NULL,
   `org_email` varchar(255) NOT NULL,
   `org_process` varchar(255) NOT NULL,
   `createdAt` datetime NOT NULL,
@@ -138,9 +147,11 @@ CREATE TABLE `tbl_rescueorg` (
 --
 
 INSERT INTO `tbl_rescueorg` (`rescueOrgId`, `org_name`, `org_address`, `org_description`, `org_contact`, `org_email`, `org_process`, `createdAt`, `updatedAt`) VALUES
-(3, 'Happy Paw Rescue', '4 Veterans RoadVeterans Center 1630', 'We rescue take unwanted, abandoned, abused, or stray pets and attempt to find suitable homes for them. We are dedicated to pet adoption.', 8384863, 'happypawrescue@gmail.com', 'Submit Application, Interview, Pay Fee (Php200), Home Check', '2022-02-18 21:47:47', '2022-02-18 13:47:47'),
-(4, 'Wagging Tail Rescue', '3F Hildevanne Food Corporation, 254 P. Burgos', 'We help and rescue stray pet adn find them new and suitable homes.', 321, 'wagtailrescue@gmail.com', 'Submit Application, Interview, Home Check, Pay Fee (Php100)', '2022-02-18 21:49:33', '2022-02-18 13:49:33'),
-(5, 'Sweet Whiskers Rescue', 'Lepanto Tiles, Silangan I', 'We provide shelter to stray, unwanted, abused pet. We promote pet adoption. Help our cause by donating what you can give.', 8221930, 'sweetwhiskers@gmail.com', 'Submit Application, Interview, Home Check', '2022-02-18 21:52:46', '2022-02-18 13:52:46');
+(3, 'Happy Paw Rescue', '4 Veterans RoadVeterans Center 1630', 'We rescue take unwanted, abandoned, abused, or stray pets and attempt to find suitable homes for them. We are dedicated to pet adoption.', '09128384863', 'happypawrescue@gmail.com', 'Submit Application, Interview, Pay Fee (Php200), Home Check', '2022-02-18 21:47:47', '2022-03-02 11:08:51'),
+(4, 'Wagging Tail Rescue', '3F Hildevanne Food Corporation, 254 P. Burgos', 'We help and rescue stray pet adn find them new and suitable homes.', '09987654321', 'wagtailrescue@gmail.com', 'Submit Application, Interview, Home Check, Pay Fee (Php100)', '2022-02-18 21:49:33', '2022-03-02 11:08:35'),
+(5, 'Sweet Whiskers Rescue', 'Lepanto Tiles, Silangan I', 'We provide shelter to stray, unwanted, abused pet. We promote pet adoption. Help our cause by donating what you can give.', '09978221930', 'sweetwhiskers@gmail.com', 'Submit Application, Interview, Home Check', '2022-02-18 21:52:46', '2022-03-02 11:08:04'),
+(10, 'Stray Worth Saving', 'Davao City, Philippines', 'http://www.straysworthsaving.org/', '09176363824', '', 'You can check their facebook page for more information.\r\n\r\nClick here: https://web.facebook.com/straysworthsaving', '2022-03-01 23:34:10', '2022-03-02 11:10:36'),
+(11, 'The Cat House', 'Cavite, Philippines', 'Home of Rescue Puspins and Aspins.', '09062352037', 'solaandsiblings@gmail.com', 'You can check their facebook page for more information. \r\n\r\nClick here: https://web.facebook.com/solaandsiblings', '2022-03-01 23:37:51', '2022-03-01 15:45:32');
 
 -- --------------------------------------------------------
 
@@ -237,13 +248,13 @@ ALTER TABLE `tbl_pets`
 -- AUTO_INCREMENT for table `tbl_products`
 --
 ALTER TABLE `tbl_products`
-  MODIFY `productId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=101;
+  MODIFY `productId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=113;
 
 --
 -- AUTO_INCREMENT for table `tbl_rescueorg`
 --
 ALTER TABLE `tbl_rescueorg`
-  MODIFY `rescueOrgId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `rescueOrgId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `tbl_users`
