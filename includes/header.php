@@ -10,7 +10,6 @@
 
     <!-- Bootstrap and CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- <link rel="stylesheet" href="assets/bootstrap-5.1.3-dist/css/bootstrap.min.css"> -->
 
     <!-- Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -22,10 +21,20 @@
     <!--For ICON dahil sa square na stars....-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     
-
+    <!-- Jquery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    
+
+    <!-- Bootstrap JS  Bundle -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Bootstrap support for IE -->
+    <link href="assets/bootstrap-ie11-main/css/bootstrap-ie11.min.css" rel="stylesheet" media="all and (-ms-high-contrast: active), (-ms-high-contrast: none)">
+    <!-- required JavaScript polyfills for IE11 -->
+    <script nomodule crossorigin="anonymous"
+        src="https://polyfill.io/v3/polyfill.min.js?features=default%2CNumber.parseInt%2CNumber.parseFloat%2CArray.prototype.find%2CArray.prototype.includes">
+        </script>
+    <script
+        nomodule>window.MSInputMethodContext && document.documentMode && document.write('<script src="https://cdn.jsdelivr.net/combine/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js,npm/ie11-custom-properties@4,npm/element-qsa-scope@1"><\/script>');</script>
 </head>
 
 <body>

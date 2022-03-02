@@ -13,14 +13,14 @@
                         <label for="pet_name" class="col-form-label">Name</label>
                         <input type="text" class="form-control" name="pet_name" id="pet_name">
                     </div>
-                    <div class="row mx-md-auto">
-                        <div class="col-md-6 ps-md-0 pe-md-2">
+                    <div class="row">
+                        <div class="col-md-6">
                             <div class="mb-3">
                                 <label for="pet_age" class="col-form-label">Age</label>
                                 <input type="text" class="form-control" name="pet_age" id="pet_age">
                             </div>
                         </div>
-                        <div class="col-md-6 ps-md-2 pe-md-0">
+                        <div class="col-md-6">
                             <div class="mb-3">
                                 <label class="col-form-label">Gender</label>
                                 <select class="form-select" name="pet_gender" id="pet_gender">
@@ -30,8 +30,8 @@
                             </div>
                         </div>
                     </div>
-                    <div class="row mx-md-auto">
-                        <div class="col-md-3 ps-md-0 pe-md-2">
+                    <div class="row">
+                        <div class="col-md-3">
                             <div class="mb-3">
                                 <label class="col-form-label">Size</label>
                                 <select class="form-select" name="pet_size" id="pet_size">
@@ -51,13 +51,13 @@
                                 </select>
                             </div>
                         </div>
-                        <div class="col-md-3 ps-md-0 pe-md-0">
+                        <div class="col-md-3">
                             <div class="mb-3">
                                 <label for="pet_weight" class="col-form-label">Weight <small>(pounds)</small></label>
                                 <input type="number" class="form-control" name="pet_weight" id="pet_weight">
                             </div>
                         </div>
-                        <div class="col-md-6 ps-md-2 pe-md-0">
+                        <div class="col-md-6">
                             <div class="mb-3">
                                 <label class="col-form-label">Sterilization</label>
                                 <select class="form-select" name="pet_sterilization" id="pet_sterilization">

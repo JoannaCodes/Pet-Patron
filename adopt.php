@@ -44,7 +44,7 @@
                         
                         foreach($pet as $row){
                             ?>
-                                <div class="col pe-md-3">
+                                <div class="col-md-4">
                                     <a class="card-pet" href="pet-profile.php?pet-id=<?php echo $row['petId'] ?>">
                                         <div class="card-box shadow mb-3 mh-100">
                                             <div class="card-thumbnail m-2">

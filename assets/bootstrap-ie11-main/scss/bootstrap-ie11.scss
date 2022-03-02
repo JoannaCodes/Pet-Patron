@@ -1,0 +1,25 @@
+/*!
+ * Bootstrap for IE11 v5.1.3 (https://github.com/coliff/bootstrap-ie11)
+ * Copyright 2021 C.Oliff
+ * Licensed under MIT (https://github.com/coliff/bootstrap-ie11/blob/main/LICENSE)
+ */
+
+@media all and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  @import "reboot";
+  @import "tables";
+  @import "utilities";
+  @import "breadcrumb";
+  @import "buttons";
+  @import "card";
+  @import "carousel";
+  @import "close";
+  @import "forms/form-check";
+  @import "forms/form-control";
+  @import "forms/form-floating-labels";
+  @import "forms/form-range";
+  @import "forms/form-select";
+  @import "modal";
+  @import "progress";
+  @import "tooltip";
+  @import "helpers/ratio";
+}
