@@ -5,15 +5,15 @@
             INNER JOIN tbl_rescueorg ON tbl_pets.rescueOrgId = tbl_rescueorg.rescueOrgId
             ORDER BY petId DESC LIMIT 5";
     $pets = mysqli_query($conn, $sql);
-    $petcount = mysqli_num_rows($pets);
+    $petcount = mysqli_num_rows(mysqli_query($conn, "SELECT * FROM tbl_pets"));
 
     $sql2 = "SELECT * FROM tbl_orders ORDER BY createdAt LIMIT 5";
     $orders = mysqli_query($conn, $sql2);
-    $ordercount = mysqli_num_rows($orders);
+    $ordercount = mysqli_num_rows(mysqli_query($conn, "SELECT * FROM tbl_orders"));
 
     $sql3 = "SELECT * FROM tbl_users";
     $users = mysqli_query($conn, $sql3);
-    $usercount = mysqli_num_rows($users);
+    $usercount = mysqli_num_rows(mysqli_query($conn, "SELECT * FROM tbl_users"));
 ?>
 <div class="container p-5">
     <div class="row" id="summary-stats">

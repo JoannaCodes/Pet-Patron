@@ -43,7 +43,7 @@
                                 </div>
                                 <div class="col-md-6">
                                     <p>Weight: <?php echo $pet_profile['pet_weight'] ?>lbs</p>
-                                    <p>Size: <?php echo $pet_profile['pet_gender'] ?></p>
+                                    <p>Size: <?php echo $pet_profile['pet_size'] ?></p>
                                 </div>
                             </div>
                             <hr>

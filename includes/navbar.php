@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg shadow">
   <div class="container">
-    <a class="navbar-brand mt-2 mt-lg-0" href="home-page.html">
+    <a class="navbar-brand mt-2 mt-lg-0" href="home.php">
       <img src="assets/images/logo/pet_patron_logo2.png" width="225" height="75" alt="Pet Patron Logo">
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar"

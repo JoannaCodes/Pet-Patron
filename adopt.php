@@ -34,7 +34,8 @@
         <!-- Pet Gallery -->
         <div class="gallery row mt-5 mb-5 mx-0" id="pets">
             <div class="pet-gallery col-md-9 pe-lg-5">
-                <h1 class="mb-3">Fur Buddies</h1>
+                <h2 class="mb-3">🐾 Furry Buddies 🐾</h2>
+                <hr style="height:3px; border-width:0; color:gray; background-color:gray">
                 <div class="row row-cols-2 row-cols-md-3 mb-5 g-4">
                     <?php
                         include "admin/config/connection.php";
