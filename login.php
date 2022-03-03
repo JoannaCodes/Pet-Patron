@@ -8,19 +8,19 @@
             <div class="forms row">
                 <div class="col-md-6">
                     <!-- Login Form -->
-                    <form action="" id="login-form">
+                    <form action="validate.php" id="login-form">
                         <div class="mb-md-5 mt-md-4 mx-md-5 pb-md-5">
                             <h2 class="mb-2">Login</h2>
                             <p class="mb-5">Please enter your email and password!</p>
                     
                             <!-- Email Input -->
                             <div class="form-group form-outline mb-3">
-                                <input type="email" id="email" class="form-control form-control-lg" placeholder="Email Address" />
+                                <input type="email" name="user_email" class="form-control form-control-lg" placeholder="Email Address" />
                             </div>
                     
                             <!-- Password Input -->
                             <div class="form-group form-outline mb-3">
-                                <input type="password" id="password" class="form-control form-control-lg" placeholder="Password" />
+                                <input type="password" name="user_password" class="form-control form-control-lg" placeholder="Password" />
                             </div>
                     
                             <!-- Login Button -->

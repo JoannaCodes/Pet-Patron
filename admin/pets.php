@@ -2,9 +2,9 @@
     include "../admin/config/connection.php";
 
     $sql = "SELECT * FROM tbl_pets 
-            INNER JOIN tbl_rescueorg ON tbl_pets.rescueOrgId = tbl_rescueorg.rescueOrgId";
+            INNER JOIN tbl_rescueorg ON tbl_pets.rescueOrgId = tbl_rescueorg.rescueOrgId ORDER BY petId";
     $pets = mysqli_query($conn, $sql);
-    $rowcount = mysqli_num_rows($pets)
+    $rowcount = mysqli_num_rows($pets);
 ?>
 <div class="container p-5">
     <div class="row p-3 shadow" id="table">

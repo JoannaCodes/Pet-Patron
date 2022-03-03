@@ -82,7 +82,7 @@
                     <h4>We would love to hear from you !</h4>
                     <hr>
                     <p>Contact Information</p>
-                    <p>Email: info@petpatron.com</p>
+                    <p>Email: infopetpatron@gmail.com</p>
                     <p>Contact No.: 09281716596</p>
                 </div>
             </div>
@@ -91,20 +91,38 @@
                     <form action="admin/config/insertData.php" method="post">
                         <div class="mb-3 form-group">
                             <label for="name" class="col-form-label">Username</label>
-                            <input type="text" class="form-control" name="name">
+                            <input type="text" class="form-control" name="name" required>
                         </div>
                         <div class="mb-3 form-group">
                             <label for="email" class="col-form-label">Email</label>
-                            <input type="email" class="form-control" name="email">
+                            <input type="email" class="form-control" name="email" required>
                         </div>
                         <div class="mb-3 form-group">
                             <label for="message" class="col-form-label">Message</label>
-                            <textarea class="form-control" name="pet_description" name="message"></textarea>
+                            <textarea class="form-control" name="pet_description" name="message" required></textarea>
                         </div>
-                        <button type="submit" class="btn btn-outline-custom" name="add_admin" id="add_admin">Send</button>
-                        </div>
+                        <button type="submit" class="btn btn-outline-custom" name="submit" id="submit">Send</button>
                     </form>
                 </div>
+                <?php 
+                    if(isset($_POST['submit'])){
+                        $to = "infopetpatron@gmail.com"; // this is your Email address
+                        $from = $_POST['email']; // this is the sender's Email address
+                        $name = $_POST['name'];
+                        $subject = "Pet Patron Mail";
+                        $subject2 = "Pet Patron form submission";
+                        $message = $name . " wrote the following:" . "\n\n" . $_POST['message'];
+                        $message2 = "Here is a copy of your message " . $name . "\n\n" . $_POST['message'];
+
+                        $headers = "From:" . $from;
+                        $headers2 = "From:" . $to;
+                        mail($to,$subject,$message,$headers);
+                        mail($from,$subject2,$message2,$headers2); // sends a copy of the message to the sender
+                        echo "Mail Sent. Thank you " . $name . ", we will contact you shortly.";
+                        ('Location: index.php');
+                        // You can also use header('Location: thank_you.php'); to redirect to another page.
+                        }
+                ?>
             </div>
         </div>
     </div>

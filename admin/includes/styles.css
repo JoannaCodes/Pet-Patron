@@ -168,12 +168,12 @@ table tr:hover {
     background-color: #FF7F50;
 }
 
-.login-container{
+.login-container {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-} 
+}
 
 .login-form {
     background: #FF7F50;
@@ -183,6 +183,16 @@ table tr:hover {
 
 .login-form-heading {
     text-align: center;
+}
+
+.fixed-head {
+    overflow-y: auto;
+    height: 30%;
+}
+
+.fixed-head thead th {
+    position: sticky;
+    top: 0;
 }
 
 @media only screen and (max-width:480px) {
@@ -199,9 +209,3 @@ table tr:hover {
         margin-left: -15rem;
     }
 }
-
-/* IE 11 */
-/* select::-ms-expand {
-    border: none;
-    display: none;
-} */

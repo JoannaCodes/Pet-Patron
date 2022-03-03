@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="includes/styles.css">
     <link rel="stylesheet" href="includes/shop.css">
 
-    <?php include 'includes/navbar.php'; ?>
+    <?php include 'includes/navbar-login.php'; ?>
 
 	<div class="container px-4">
 		<div class="product-profile row mt-5">

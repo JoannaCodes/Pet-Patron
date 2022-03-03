@@ -2,16 +2,15 @@
     session_start();
     //connection
     include_once ("connection.php");
+
+    function validate($data){
+        $data = trim($data);
+        $data = stripslashes($data);
+        $data = htmlspecialchars($data);
+        return $data;
+    }
     
     if (isset($_POST['email']) && isset($_POST['password'])) {
-
-        function validate($data){
-            $data = trim($data);
-            $data = stripslashes($data);
-            $data = htmlspecialchars($data);
-            return $data;
-        }
-
         $email = validate($_POST['email']);
         $pass = validate($_POST['password']);
 

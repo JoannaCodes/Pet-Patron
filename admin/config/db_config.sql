@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 02, 2022 at 02:55 PM
--- Server version: 10.4.22-MariaDB
--- PHP Version: 8.0.13
+-- Generation Time: Mar 03, 2022 at 06:45 AM
+-- Server version: 10.4.21-MariaDB
+-- PHP Version: 8.0.11
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `db_config`
+-- Database: `db_config5`
 --
 
 -- --------------------------------------------------------
@@ -53,8 +53,7 @@ INSERT INTO `tbl_admin` (`adminId`, `username`, `email`, `password`, `createdAt`
 CREATE TABLE `tbl_orderdetails` (
   `orderId` int(11) NOT NULL,
   `productId` int(11) NOT NULL,
-  `quantity` int(11) NOT NULL,
-  `totalPrice` int(11) NOT NULL
+  `quantity` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -66,6 +65,7 @@ CREATE TABLE `tbl_orderdetails` (
 CREATE TABLE `tbl_orders` (
   `orderId` int(11) NOT NULL,
   `userId` int(11) NOT NULL,
+  `total_price` int(11) NOT NULL,
   `createdAt` datetime NOT NULL,
   `status` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -260,7 +260,7 @@ ALTER TABLE `tbl_orders`
 -- AUTO_INCREMENT for table `tbl_pets`
 --
 ALTER TABLE `tbl_pets`
-  MODIFY `petId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `petId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=68;
 
 --
 -- AUTO_INCREMENT for table `tbl_products`
