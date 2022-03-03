@@ -15,6 +15,7 @@
                     <tr>
                         <th scope="col">Order Id</th>
                         <th scope="col">Customer Id</th>
+                        <th scope="col">Total Price</th>
                         <th scope="col">Date Ordered</th>
                         <th scope="col">Status</th>
                     </tr>
@@ -24,7 +25,7 @@
                         foreach($orders as $row){
                             ?>
                             <tr>
-                                <th><?php echo $row['orderId'] ?></th>
+                                <td><?php echo $row['orderId'] ?></td>
                                 <td><?php echo $row['userId'] ?></td>
                                 <td><?php echo $row['createdAt'] ?></td>
                                 <td><?php echo $row['status'] ?></td>

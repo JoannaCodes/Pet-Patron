@@ -3,7 +3,7 @@
     <link rel="stylesheet" href="includes/styles.css">
     <link rel="stylesheet" href="includes/shop.css">
     
-    <?php include 'includes/navbar.php'; ?>
+    <?php include 'includes/navbar-login.php'; ?>
 		
 		<div class="container">
             <div class="gallery row mt-5 mb-5 mx-0" id="shop">

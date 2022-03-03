@@ -1,31 +1,35 @@
-<nav class="navbar navbar-expand-lg shadow">
-      <!-- Container wrapper -->
-      <div class="container">
-        <a class="navbar-brand mt-2 mt-lg-0" href="home-page.html">
-          <img src="assets/images/logo/pet_patron_logo2.png" width="225" height="75" alt="Pet Patron Logo">
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" target="#navbar" data-bs-target="#navbar"
-          aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
-          <i class="fas fa-bars"></i>
-        </button>
+<nav class="navbar navbar-light bg-light">
+  <div class="container">
+    <a class="navbar-brand mt-2 mt-lg-0" href="index.php">
+      <img src="assets/images/logo/pet_patron_logo2.png" width="225" height="75" alt="Pet Patron Logo">
+    </a>
     
-    
-        <div class="dashboard collapse navbar-collapse" id="navbar">
-          <div class="user-menu">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link" href="home.php">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="adopt.php">Adopt a Pet</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="shop.php">Shop</a>
-              </li>
-            </ul>
-          </div>
-        </div>
+    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Welcome to Pet Patron</h5>
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      
+      <div class="offcanvas-body">
+        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+          <li class="nav-item">
+            <a class="nav-link" href="index.php"><i class="fa fa-home me-2"></i> Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="adopt.php"><i class="fas fa-paw me-2"></i> Adopt a pet</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="shop.php"><i class="fas fa-shopping-bag me-2"></i> Shop</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="login.php"><i class="fas fa-user-circle me-2"></i> Login/Signup</a>
+          </li>
+        </ul>
+      </div>
     </div>
-    </div>
+  </div>
 </nav>
-    

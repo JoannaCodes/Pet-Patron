@@ -43,7 +43,6 @@
                                 <td><?php echo $row['updatedAt']; ?></td>
                                 <td>
                                     <button class="btn btn-warning mb-1" id="editOrgBtn">Edit Info</button>
-                                    <button class="btn btn-info mb-1" id="addPetBtn">Add Pets Data</button>
                                     <button class="btn btn-danger mb-1" id="deleteBtn">Delete</button>
                                 </td>
                             </tr>
@@ -68,29 +67,6 @@
             //Table Refresh Manual
             $("#refreshBtn").click(function(){
                 $('#content').load('../admin/rescueOrg.php');
-            });
-
-            //Add Pet Data
-            $("#orgTable #addPetBtn").click(function(){
-                $("#addPetModal").show();
-
-                $tr = $(this).closest('tr');
-
-                var data = $tr.children("td").map(function () {
-                    return $(this).text();
-                }).get();
-
-                console.log(data);
-
-                $('#pet_org_id').val(data[0]);
-            });
-
-            $("#addPetModal #closeBtn").click(function(){
-                $("#addPetModal").hide();
-            });
-
-            $("#addPetModal #add_pet").click(function(){
-                $("#addPetModal").hide();
             });
         });
     </script>

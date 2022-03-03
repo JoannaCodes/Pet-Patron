@@ -3,7 +3,7 @@
     <link rel="stylesheet" href="includes/styles.css">
     <link rel="stylesheet" href="includes/user.css">
     
-    <?php include 'includes/navbar.php'; ?>
+    <?php include 'includes/navbar-login.php'; ?>
 
     <div class="user container-fluid mt-5 px-0 vh-100">
 			<div class="tab">

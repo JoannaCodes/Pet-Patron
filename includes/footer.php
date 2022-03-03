@@ -12,7 +12,7 @@
       
             <ul class="quick-links list-unstyled mb-0">
               <li>
-                <a href="home.php">Home</a>
+                <a href="index.php">Home</a>
               </li>
               <li>
                 <a href="adopt.php">Adopt A Pet</a>
@@ -21,10 +21,10 @@
                 <a href="shop.php">Shop</a>
               </li>
               <li>
-                <a href="home.php#about">About</a>
+                <a href="index.php#about">About</a>
               </li>
               <li>
-                <a href="home.php#about">Contact Us</a>
+                <a href="index.php#about">Contact Us</a>
               </li>
             </ul>
           </div>

@@ -65,9 +65,10 @@
         $sterilization = $_POST['pet_sterilization'];
         $description = mysqli_real_escape_string($conn, $_POST['pet_description']);
 
-        $filename = basename($_FILES["pet_image"]["name"]);   
-        //$folder = "Pet-Patron/uploads/pets/".$filename;
-        //$fileType = pathinfo($folder, PATHINFO_EXTENSION);
+        $filename = basename($_FILES["pet_image"]["name"]);
+        $dir = dirname(__DIR__,2);
+        $folder = $dir."\\uploads/pets\\".$filename;
+        $fileType = pathinfo($folder, PATHINFO_EXTENSION);
 
         $query = "INSERT INTO tbl_pets (rescueOrgId, pet_name, pet_age, pet_gender, pet_size, pet_weight, pet_sterilization, pet_description, pet_image, createdAt)
         VALUES ('$rescueorg_id', '$name', '$age', '$gender', '$size', '$weight', '$sterilization', '$description', '$filename', NOW())";
@@ -77,20 +78,19 @@
         if($query_run)
         {
             echo '<script> alert("Data Saved"); </script>';
+            //Check if image upload is successful
+            if (move_uploaded_file($_FILES["pet_image"]["tmp_name"], $folder))  
+            {
+                echo '<script> alert("Image uploaded successfully"); </script>';
+            }else{
+            
+                echo '<script> alert("Failed to upload image"); </script>';
+            }
         }
         else
         {
             echo '<script> alert("Data Not Saved"); </script>';
         }
-
-        //Check if image upload is successful
-        // if (move_uploaded_file($_FILES["pet_image"]["tmp_name"], $folder))  
-        // {
-        //     echo '<script> alert("Image uploaded successfully"); </script>';
-        // }else
-        // {
-        //     echo '<script> alert("Failed to upload image"); </script>';
-        // }
 
         //close connection
         mysqli_close($conn);
