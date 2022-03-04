@@ -100,8 +100,8 @@
                                                     </td>
                                                     <td><?php echo $values["item_name"]; ?></td>  
                                                     <td><?php echo $values["item_quantity"]; ?></td>  
-                                                    <td>$ <?php echo $values["item_price"]; ?></td>  
-                                                    <td>$ <?php echo number_format($values["item_quantity"] * $values["item_price"], 2); ?></td>  
+                                                    <td>Php <?php echo $values["item_price"]; ?>.00</td>  
+                                                    <td>Php <?php echo number_format($values["item_quantity"] * $values["item_price"], 2); ?></td>  
                                                 </tr>  
                                                 <?php  
                                                 $total = $total + ($values["item_quantity"] * $values["item_price"]);
@@ -110,7 +110,7 @@
                                             ?>  
                                             <tr>  
                                                 <td colspan="4" align="right">Total</td>  
-                                                <td align="right">$ <?php echo number_format($total, 2); ?></td>
+                                                <td align="right">Php <?php echo number_format($total, 2); ?></td>
                                             </tr>  
                                             <?php  
                                         }
@@ -122,7 +122,7 @@
                                                 </tr>  
                                                 <tr>  
                                                     <td colspan="4" align="right">Total</td>  
-                                                    <td align="right">$ <?php echo number_format($total, 2); ?></td>
+                                                    <td align="right">Php <?php echo number_format($total, 2); ?></td>
                                                 </tr> 
                                             <?php
                                         }  
