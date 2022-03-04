@@ -82,8 +82,8 @@
                                     <thead>
                                         <th>Actions</th>
                                         <th>Item</th>
-                                        <th>Price</th>
                                         <th>Quantity</th>
+                                        <th>Price</th>
                                         <th>Subtotal</th>
                                     </thead>
                                     <tbody>
@@ -156,7 +156,7 @@
                                     <div class="col-md-3">
                                         <form action="shop.php?action=add&id=<?php echo $row['productId'] ?>" method="post">
                                             <div class="card-box shadow">
-                                                <div class="card-thumbnail m-2">
+                                                <div class="card-thumbnail m-2 p-3">
                                                     <img class="img-fluid mb-3" img src="uploads/products/<?php echo $row['product_image'] ?>" alt="cat-food">
                                                 </div>
                                                 <div class="card-body px-3 pb-1 mb-3">
