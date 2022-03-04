@@ -15,6 +15,7 @@
             <table class="table table-responsive" id="petTable">
                 <thead>
                     <tr>
+                        <th scope="col">Id</th>
                         <th scope="col">Rescue Org</th>
                         <th scope="col">Name</th>
                         <th scope="col">Age</th>
@@ -34,6 +35,7 @@
                         foreach($pets as $row){
                             ?>
                                 <tr>
+                                    <td><?php echo $row['petId']; ?></td>
                                     <td><?php echo $row['org_name']; ?></td>
                                     <td><?php echo $row['pet_name']; ?></td>
                                     <td><?php echo $row['pet_age']; ?></td>
