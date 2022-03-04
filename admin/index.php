@@ -42,9 +42,6 @@
             </div>
             <hr>
             <div class="list-group list-group-flush">
-                <a class="list-group-item list-group-item-action" id="users">
-                    <i class="fas fa-user-alt me-2"></i>Users
-                </a>
                 <a class="list-group-item list-group-item-action" id="admin">
                     <i class="fas fa-user-shield me-2"></i>Admin
                 </a>

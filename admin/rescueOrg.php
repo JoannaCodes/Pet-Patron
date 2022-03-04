@@ -15,7 +15,6 @@
             <table class="table table-responsive" id="orgTable">
             <thead>
                 <tr>
-                    <th scope="col">Id</th>
                     <th scope="col">Name</th>
                     <th scope="col">Contact</th>
                     <th scope="col">Email</th>
@@ -32,7 +31,6 @@
                     foreach($admins as $row){
                         ?>
                             <tr>
-                                <td><?php echo $row['rescueOrgId']; ?></td>
                                 <td><?php echo $row['org_name']; ?></td>
                                 <td><?php echo $row['org_contact']; ?></td>
                                 <td><?php echo $row['org_email']; ?></td>
@@ -54,7 +52,7 @@
         </div>
     </div>
     <p class="mt-3">Manually Refresh Table when change is made</p>
-    <p class="mt-3"><strong>Total Users: <?php echo $rowcount; ?></strong></p>
+    <p class="mt-3"><strong>Total: <?php echo $rowcount; ?></strong></p>
     <iframe name="content"></iframe>
     <?php mysqli_close($conn); ?>
 

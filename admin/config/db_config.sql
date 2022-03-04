@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 03, 2022 at 06:45 AM
+-- Generation Time: Mar 04, 2022 at 07:20 PM
 -- Server version: 10.4.21-MariaDB
 -- PHP Version: 8.0.11
 
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `db_config5`
+-- Database: `db_config`
 --
 
 -- --------------------------------------------------------
@@ -64,11 +64,22 @@ CREATE TABLE `tbl_orderdetails` (
 
 CREATE TABLE `tbl_orders` (
   `orderId` int(11) NOT NULL,
-  `userId` int(11) NOT NULL,
+  `user_name` varchar(255) NOT NULL,
+  `user_contact` varchar(100) NOT NULL,
+  `user_email` varchar(100) NOT NULL,
+  `user_address` text NOT NULL,
+  `additional` text NOT NULL,
   `total_price` int(11) NOT NULL,
-  `createdAt` datetime NOT NULL,
-  `status` varchar(255) NOT NULL
+  `createdAt` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `tbl_orders`
+--
+
+INSERT INTO `tbl_orders` (`orderId`, `user_name`, `user_contact`, `user_email`, `user_address`, `additional`, `total_price`, `createdAt`) VALUES
+(6222565, 'test2', '', 'test2@gmail.com', 'test2', '', 1149, '2022-03-05 02:12:01'),
+(622252512, 'test', 'test', 'test@gmail.com', 'test', '', 0, '2022-03-05 01:54:59');
 
 -- --------------------------------------------------------
 
@@ -171,25 +182,6 @@ INSERT INTO `tbl_rescueorg` (`rescueOrgId`, `org_name`, `org_address`, `org_desc
 (10, 'Stray Worth Saving', 'Davao City, Philippines', 'http://www.straysworthsaving.org/', '09176363824', '', 'You can check their facebook page for more information.\r\n\r\nClick here: https://web.facebook.com/straysworthsaving', '2022-03-01 23:34:10', '2022-03-02 11:10:36'),
 (11, 'The Cat House', 'Cavite, Philippines', 'Home of Rescue Puspins and Aspins.', '09062352037', 'solaandsiblings@gmail.com', 'You can check their facebook page for more information. \r\n\r\nClick here: https://web.facebook.com/solaandsiblings', '2022-03-01 23:37:51', '2022-03-01 15:45:32');
 
--- --------------------------------------------------------
-
---
--- Table structure for table `tbl_users`
---
-
-CREATE TABLE `tbl_users` (
-  `userId` int(11) NOT NULL,
-  `user_name` varchar(255) NOT NULL,
-  `user_age` int(11) NOT NULL,
-  `user_gender` varchar(255) NOT NULL,
-  `user_address` varchar(255) NOT NULL,
-  `user_contact` int(11) NOT NULL,
-  `user_email` varchar(255) NOT NULL,
-  `user_password` varchar(255) NOT NULL,
-  `createdAt` datetime NOT NULL,
-  `updatedAt` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
 --
 -- Indexes for dumped tables
 --
@@ -211,9 +203,7 @@ ALTER TABLE `tbl_orderdetails`
 -- Indexes for table `tbl_orders`
 --
 ALTER TABLE `tbl_orders`
-  ADD PRIMARY KEY (`orderId`),
-  ADD KEY `productId` (`userId`),
-  ADD KEY `userId` (`userId`);
+  ADD PRIMARY KEY (`orderId`);
 
 --
 -- Indexes for table `tbl_pets`
@@ -235,12 +225,6 @@ ALTER TABLE `tbl_rescueorg`
   ADD PRIMARY KEY (`rescueOrgId`);
 
 --
--- Indexes for table `tbl_users`
---
-ALTER TABLE `tbl_users`
-  ADD PRIMARY KEY (`userId`);
-
---
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -249,12 +233,6 @@ ALTER TABLE `tbl_users`
 --
 ALTER TABLE `tbl_admin`
   MODIFY `adminId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
-
---
--- AUTO_INCREMENT for table `tbl_orders`
---
-ALTER TABLE `tbl_orders`
-  MODIFY `orderId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `tbl_pets`
@@ -275,12 +253,6 @@ ALTER TABLE `tbl_rescueorg`
   MODIFY `rescueOrgId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
--- AUTO_INCREMENT for table `tbl_users`
---
-ALTER TABLE `tbl_users`
-  MODIFY `userId` int(11) NOT NULL AUTO_INCREMENT;
-
---
 -- Constraints for dumped tables
 --
 
@@ -290,12 +262,6 @@ ALTER TABLE `tbl_users`
 ALTER TABLE `tbl_orderdetails`
   ADD CONSTRAINT `tbl_orderdetails_ibfk_1` FOREIGN KEY (`orderId`) REFERENCES `tbl_orders` (`orderId`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `tbl_orderdetails_ibfk_2` FOREIGN KEY (`productId`) REFERENCES `tbl_products` (`productId`) ON DELETE CASCADE ON UPDATE CASCADE;
-
---
--- Constraints for table `tbl_orders`
---
-ALTER TABLE `tbl_orders`
-  ADD CONSTRAINT `tbl_orders_ibfk_1` FOREIGN KEY (`userId`) REFERENCES `tbl_users` (`userId`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `tbl_pets`
