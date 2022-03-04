@@ -1,53 +1,5 @@
 .user {
     display: flex;
+    justify-content: center;
     overflow: hidden;
-}
-
-.tab {
-    /* background-color: #FF7F50; */
-    width: 30%;
-    height: 100%;
-}
-
-.tab button {
-    background-color: transparent;
-    display: block;
-    /* background-color: #FF7F50; */
-    color: black;
-    width: 100%;
-    border: none;
-    outline: none;
-    text-align: left;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-.tab button:hover {
-    background-color: #FF7F50;
-}
-
-.tab button.active {
-    background-color: #FF5A1D;
-}
-
-.tabcontent {
-    border-left: 1px solid #FF7F50;
-    width: 70%;
-    height: 100%;
-}
-
-/* Purchase Tab Content */
-.tab-content {
-    background-color: #FFFFFF;
-    border: 1px solid #CCCCCC;
-    border-top: none;
-}
-
-.nav-link {
-    color: #212529;
-}
-
-.btn-custom {
-    background-color: #FF7F50;
-    border-radius: 10px;
 }

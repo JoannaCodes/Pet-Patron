@@ -24,7 +24,7 @@
                 <a href="index.php#about">About</a>
               </li>
               <li>
-                <a href="index.php#about">Contact Us</a>
+                <a href="index.php#contact">Contact Us</a>
               </li>
             </ul>
           </div>
