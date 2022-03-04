@@ -15,6 +15,7 @@
             <table class="table table-responsive" id="orgTable">
             <thead>
                 <tr>
+                    <th scope="col">Id</th>
                     <th scope="col">Name</th>
                     <th scope="col">Contact</th>
                     <th scope="col">Email</th>
@@ -31,6 +32,7 @@
                     foreach($admins as $row){
                         ?>
                             <tr>
+                                <td><?php echo $row['rescueOrgId']; ?></td>
                                 <td><?php echo $row['org_name']; ?></td>
                                 <td><?php echo $row['org_contact']; ?></td>
                                 <td><?php echo $row['org_email']; ?></td>
