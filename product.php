@@ -71,7 +71,7 @@
                                                 </div>
                                                 <h4><?php echo $row['product_name'] ?></h4>
                                                 <h6>Php <?php echo $row['product_price'] ?></h6>
-                                                <a href="product.php?product-id=<?php echo $row['productId'] ?>" type="button" class="btn btn-custom">Buy Now</a>
+                                                <a href="pet-page.php?product-id=<?php echo $row['productId'] ?>" type="button" class="btn btn-custom">Buy Now</a>
                                             </div>
                                         </div>
                                     </div>
